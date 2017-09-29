@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Game Creator's Club</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <link rel="stylesheet" href="./hoge1.css">
+
+  <script type="text/javascript">
+    $(function(){
+      $("#jQueryBox1").css("display","none");
+    // 「id="jQueryPush"」がクリックされた場合
+      $("#jQueryPush").click(function(){
+        // 「id="jQueryBox"」の表示、非表示を切り替える
+        $("#jQueryBox1").toggle("slow");
+        $("#jQueryBox2").toggle("slow");
+    });
+    });
+  </script>
+</head>
+
+<body>
+  <header class="header">
+  <!--グローバルナビ-->
+  <nav id="gnav">
+    <ul class="navbar">
+      <li class="title"><a href=""><img src="images/Logo.png"></a></li>
+      <div id="jQueryPush">
+        <div class="menu">
+          <div class="menu1"></div>
+          <div class="menu2"></div>
+          <div class="menu3"></div>
+        </div>
+      </div>
+      <div id=jQueryBox1>
+        <li><a href="">HOME</a></li>
+        <li><a href="">SOMETHING</a></li>
+        <li><a href="">SOMETHING</a></li>
+        <li><a href="">SOMETHING</a></li>
+      </div>
+      <div id=jQueryBox2>
+        <li><a href="">HOME</a></li>
+        <li><a href="">SOMETHING</a></li>
+        <li><a href="">SOMETHING</a></li>
+        <li><a href="">SOMETHING</a></li>
+      </div>
+    </ul>
+  </nav>
+  </header>
+  <!--メインコンテンツ-->
+  <div class="sheet">
+    <div class="maincontents">
+      <h1>Hello,World!</h1>
+    </div>
+    <div class="subcontents">
+      <h2>subsub</h2>
+    </div>
+  </div>
+  
+  
+
+
+
+
+
+
+</body>
+</html>

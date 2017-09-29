@@ -1,0 +1,323 @@
+body{
+  margin: 0;
+  background: url(images/black0028.png);
+  font-family: "Century Gothic";
+}
+li{
+  list-style: none;
+}
+a{
+  color: blue;
+  text-decoration: none;
+  -webkit-tap-highlight-color: lightblue;
+}
+a:hover{
+
+}
+@media screen and (min-width: 1200px){
+  #gnav{
+    width: 100%;
+    background: darkgray;
+  }
+  #gnav ul{
+    background: whitesmoke;
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    top: 0; left: 0;
+  }
+  .navbar{
+    overflow: hidden;
+  }
+  .navbar li{
+    box-sizing: border-box;
+    float:left;
+    width: 120px;
+    background: silver;
+  }
+  .navbar li.title{
+    padding: 12px 0 6px 0;
+    width: 450px;
+    margin-right: 220px; 
+  }
+  .navbar li a{
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 28px 0;
+  }
+  .navbar li.title a{
+    padding: 0;
+  }
+  #jQueryPush{
+    display: none;
+  }
+  #jQueryBox1{
+    display: none!important;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1199px){
+  #gnav{
+    width: 100%;
+    background: darkgray;
+    box-shadow: 0px 3px 10px 5px rgba(0,0,0,0.5);
+  }
+  #gnav ul{
+    background: whitesmoke;
+    width: 992px;
+    margin: 0 auto;
+    height: 80px;
+  }
+  .navbar{
+    overflow: hidden;
+  }
+  .navbar li{
+    box-sizing: border-box;
+    float:left;
+    width: 120px;
+    height: 80px;
+    background: silver;
+  }
+  .navbar li.title{
+    padding: 12px 0;
+    width: auto;
+    margin-right: 60px;
+  }
+  .navbar li:not(.title) a:hover{
+    opacity: 0.5;
+  }
+  .logo{
+    vertical-align: middle;
+  }
+  .navbar li:not(.title) a{
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 28px 0;
+    font-family: cursive;
+    font-weight: bold;
+    font-size: 18px;
+    color: green;
+  }
+  #jQueryPush{
+    display: none;
+  }
+  #jQueryBox1{
+    display: none!important;
+  }
+} 
+@media screen and (min-width: 768px) and (max-width: 991px){
+  #gnav{
+    width: 100%;
+    background: darkgray;
+    box-shadow: 0px 3px 10px 5px rgba(0,0,0,0.5);
+  }
+  .navbar{
+    background: whitesmoke;
+    overflow: hidden;
+    width: 728px;
+    margin: 0 auto;
+    position: relative;
+    top: 0; left: 0;
+  }
+  .logo{
+    vertical-align: middle;
+    margin: 0;
+  }
+  .navbar li{
+    width: 100%;
+  }
+  .navbar li.title{
+    padding: 12px 0;
+    width: 404px;
+  }
+  .navbar li:not(.title){
+    margin: 0;
+    background: gray;
+    width: 680px;
+  }
+  .navbar li:not(.title) a{
+    display: block;
+    text-align: center;
+    padding: 5px 0;
+  }
+  .navbar li:not(.title) a:hover{
+    background: silver;
+  }
+  .navbar li.title a:hover{
+    opacity: 0.8;
+  }
+  #gnav ul #jQueryPush{
+    cursor: pointer;
+    position: absolute;
+    top: 24px; left: 680px;
+  }
+  #jQueryPush:hover{
+    background: lightblue;
+  }
+  #jQueryBox2{
+    display: none!important;
+  }
+  .menu
+  { 
+    margin: 0;
+    width: 40px; height: 30px; 
+    border: 1px solid darkgray; border-radius: 4px; 
+  }
+  .menu1
+  { 
+    width: 20px; height: 2px; background: gray; 
+    top: 9px; left: 11px; position: absolute; 
+    cursor: pointer;
+  } 
+  .menu2
+  { 
+    width: 20px; height: 2px; background: gray; 
+    top: 15px; left: 11px; position: absolute;
+  }
+  .menu3
+  { 
+    width: 20px; height: 2px; background: gray; 
+    top: 21px; left: 11px;position: absolute; 
+  }
+  .menu:hover{
+    background: lightblue;
+    cursor: pointer;
+  }
+
+
+  .page{
+    width: 100%;
+    background: darkgray;
+  }
+  .main{
+    width: 768px;
+    margin: 20px auto 0 auto;
+    background: white;
+    overflow: hidden;
+    padding: 0;
+  }
+  .maincontents{
+    width: 546px;
+    float: left;
+    background: lightgreen;
+    padding: 20px;
+    margin-right: 20px;
+  }
+  .maincontents h1{
+    text-align: center;
+    font-size: 40px;
+    font-family: serif;
+  }
+  .subcontents{
+    width: 160px;
+    float: left;
+    background: lightblue;
+    padding: 0;
+    border: 1px solid silver;
+    box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.3);
+
+  }
+  .about{
+    border: 1px solid black;
+    background: red;
+  }
+  .about h5{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 300;
+    padding: 2px 0;
+    margin: 0;
+    background: orange;
+    border-bottom: 1px dashed black;
+  }
+  .about p{
+    display: block;
+    margin: 0;
+    padding: 2px 7px;
+    font-size: 14px;
+  }
+  .submenu ul{
+    margin: 0;
+    margin-top: 50px;
+    padding: 0;
+    border: 1px solid brown;
+    border-radius: 3px;
+  }
+  .submenu li:not(:last-child){
+    border-bottom: 1px solid brown;
+  }
+  .submenu a{
+    display: block;
+    padding: 2px 0 ;
+  }
+}
+@media screen and (max-width: 767px){
+  #gnav{
+    width: 100%;
+    background: darkgray;
+  }
+  #gnav ul{
+    background: whitesmoke;
+    width: 400px;
+    margin: 0 auto;
+    position: relative;
+    top: 0;left: 0;
+  }
+  .navbar{
+    overflow: hidden;
+  }
+  .navbar li:not(.title){
+    background: gray;
+    width: 520px;
+  }
+  .navbar li:not(.title) a{
+    display: block;
+    text-align: center;
+    padding: 5px 0;
+  }
+  .navbar li:not(.title) a:hover{
+    background: silver;
+  }
+  .navbar li.title{
+    padding: 12px 0 6px 0;
+  }
+  #gnav ul #jQueryPush{
+    cursor: pointer;
+    position: absolute;
+    top: 24px; left: 500px;
+  }
+  #jQueryPush:hover{
+    opacity: 0.8;
+  }
+  #jQueryBox2{
+    display: none!important;
+  }
+  .menu
+  { 
+    margin: 0;
+    width: 40px; height: 30px; 
+    border: 1px solid darkgray; border-radius: 4px; 
+  }
+  .menu1
+  { 
+    width: 20px; height: 2px; background: gray; 
+    top: 9px; left: 11px; position: absolute; 
+    cursor: pointer;
+  } 
+  .menu2
+  { 
+    width: 20px; height: 2px; background: gray; 
+    top: 15px; left: 11px; position: absolute;
+  }
+  .menu3
+  { 
+    width: 20px; height: 2px; background: gray; 
+    top: 21px; left: 11px;position: absolute; 
+  }
+  .menu:hover{
+    background: lightblue;
+    cursor: pointer;
+  }
+
+} 

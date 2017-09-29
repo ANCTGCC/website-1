@@ -1,0 +1,235 @@
+body{
+  margin: 0;
+  background: url(images/black0028.png);
+}
+li{
+  list-style: none;
+}
+a{
+  color: blue;
+  text-decoration: none;
+  -webkit-tap-highlight-color: lightblue;
+}
+a:hover{
+  opacity: 0.8;
+}
+@media screen and (min-width: 1200px){
+  #gnav{
+    width: 100%;
+    background: darkgray;
+  }
+  #gnav ul{
+    background: whitesmoke;
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    top: 0; left: 0;
+  }
+  .navbar{
+    overflow: hidden;
+  }
+  .navbar li{
+    box-sizing: border-box;
+    float:left;
+    width: 120px;
+    /*border: 1px solid black;*/
+    background: silver;
+  }
+  .navbar li.title{
+    padding: 12px 0 6px 0;
+    width: 450px;
+    margin-right: 220px; 
+  }
+  .navbar li a{
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 28px 0;
+  }
+  .navbar li.title a{
+    padding: 0;
+  }
+  #jQueryPush{
+    display: none;
+  }
+  #jQueryBox1{
+    display: none!important;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1199px){
+  #gnav{
+    width: 100%;
+    background: darkgray;
+  }
+  #gnav ul{
+    background: whitesmoke;
+    width: 992px;
+    margin: 0 auto;
+  }
+  .navbar{
+    overflow: hidden;
+  }
+  .navbar li{
+    box-sizing: border-box;
+    float:left;
+    width: 120px;
+    background: silver;
+  }
+  .navbar li.title{
+    padding: 12px 0 6px 0;
+    width: 450px;
+    margin-right: 20px;
+  }
+  .navbar li a{
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 28px 0;
+  }
+  .navbar li.title a{
+    padding: 0;
+  }
+  #jQueryPush{
+    display: none;
+  }
+  #jQueryBox1{
+    display: none!important;
+  }
+} 
+@media screen and (min-width: 768px) and (max-width: 991px){
+  #gnav{
+    width: 100%;
+    background: darkgray;
+  }
+  #gnav ul{
+    background: whitesmoke;
+    width: 768px;
+    margin: 0 auto;
+    position: relative;
+    top: 0;left: 0;
+  }
+  .navbar{
+    overflow: hidden;
+  }
+  .navbar li:not(.title){
+    background: gray;
+    width: 720px;
+  }
+  .navbar li:not(.title) a{
+    display: block;
+    text-align: center;
+    padding: 5px 0;
+  }
+  .navbar li:not(.title) a:hover{
+    background: silver;
+  }
+  .navbar li.title{
+    padding: 12px 0 6px 0;
+  }
+  #gnav ul #jQueryPush{
+    cursor: pointer;
+    position: absolute;
+    top: 24px; left: 680px;
+  }
+  #jQueryPush:hover{
+    background: lightblue;
+  }
+  #jQueryBox2{
+    display: none!important;
+  }
+  .menu
+  { 
+    margin: 0;
+    width: 40px; height: 30px; 
+    border: 1px solid darkgray; border-radius: 4px; 
+  }
+  .menu1
+  { 
+    width: 20px; height: 2px; background: gray; 
+    top: 9px; left: 11px; position: absolute; 
+    cursor: pointer;
+  } 
+  .menu2
+  { 
+    width: 20px; height: 2px; background: gray; 
+    top: 15px; left: 11px; position: absolute;
+  }
+  .menu3
+  { 
+    width: 20px; height: 2px; background: gray; 
+    top: 21px; left: 11px;position: absolute; 
+  }
+  .menu:hover{
+    background: lightblue;
+    cursor: pointer;
+  }
+}
+@media screen and (max-width: 767px){
+  #gnav{
+    width: 100%;
+    background: darkgray;
+  }
+  #gnav ul{
+    background: whitesmoke;
+    width: 560px;
+    margin: 0 auto;
+    position: relative;
+    top: 0;left: 0;
+  }
+  .navbar{
+    overflow: hidden;
+  }
+  .navbar li:not(.title){
+    background: gray;
+    width: 520px;
+  }
+  .navbar li:not(.title) a{
+    display: block;
+    text-align: center;
+    padding: 5px 0;
+  }
+  .navbar li:not(.title) a:hover{
+    background: silver;
+  }
+  .navbar li.title{
+    padding: 12px 0 6px 0;
+  }
+  #gnav ul #jQueryPush{
+    cursor: pointer;
+    position: absolute;
+    top: 24px; left: 500px;
+  }
+  #jQueryPush:hover{
+    opacity: 0.8;
+  }
+  #jQueryBox2{
+    display: none!important;
+  }
+  .menu
+  { 
+    margin: 0;
+    width: 40px; height: 30px; 
+    border: 1px solid darkgray; border-radius: 4px; 
+  }
+  .menu1
+  { 
+    width: 20px; height: 2px; background: gray; 
+    top: 9px; left: 11px; position: absolute; 
+    cursor: pointer;
+  } 
+  .menu2
+  { 
+    width: 20px; height: 2px; background: gray; 
+    top: 15px; left: 11px; position: absolute;
+  }
+  .menu3
+  { 
+    width: 20px; height: 2px; background: gray; 
+    top: 21px; left: 11px;position: absolute; 
+  }
+  .menu:hover{
+    background: lightblue;
+    cursor: pointer;
+  }
+
+} 

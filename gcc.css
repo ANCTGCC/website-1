@@ -1,0 +1,195 @@
+body{
+  margin: 0;
+  background: url(images/black0028.png);
+}
+li{
+  list-style: none;
+}
+@media screen and (min-width: 1200px){
+  .navbar{
+    margin: 0 0 20px 0;
+    background: white;
+    overflow: hidden;
+    min-width: 1200px;
+  }
+  .navbar li{
+    box-sizing: border-box;
+    float:left;
+    position: relative;
+    top: 0;
+    left: -133px;
+    width: 112px;
+    border-right: dashed 1px black; 
+  }
+  .navbar li.navtitle{
+    width: 650px;
+  }
+  .navbar li a{
+    display: block;
+    padding: 29px 0;
+    width: 100%;
+    text-decoration: none;
+    text-align: center;
+  }
+  .navbar li.navtitle a{
+    padding: 10px 0;
+  }
+  .navbar li a:hover{
+    background: whitesmoke;
+  }
+  .page{
+    overflow: hidden;
+  }
+  .maincontents{
+    float: left;
+    margin: 0 30px;
+    padding: 10px 230px;
+    background: white;
+    text-align: center;
+  }
+  .subcontents{
+    float: left;
+    padding: 20px 150px;
+    background: white;
+  }  
+}
+@media screen and (min-width: 992px) and (max-width: 1119px){
+  #gnav{
+    width: 100%;
+  }
+  #gnav nav{
+    width: 800px;
+    margin: 0 auto;
+  }
+  .navbar{
+    margin: 0 0 20px 0;
+    background: white;
+    overflow: hidden;
+    max-width: 1119px;
+  }
+  .navbar li{
+    box-sizing: border-box;
+    float:left;
+    position: relative;
+    top: 0;
+    left: -58px;
+    width: 112px;
+    border-right: dashed 1px black; 
+  }
+  .navbar li.navtitle{
+    padding: 0;
+    width: 500px;
+  }
+  .navbar li a{
+    display: block;
+    padding: 29px 0;
+    width: 100%;
+    text-decoration: none;
+    text-align: center;
+  }
+  .navbar li.navtitle a{
+    padding: 10px 0;
+  }
+  .navbar li a:hover{
+    background: whitesmoke;
+  }
+  .page{
+    overflow: hidden;
+  }
+  .maincontents{
+    float: left;
+    margin: 0 30px;
+    padding: 10px 200px;
+    background: white;
+    text-align: center;
+  }
+  .subcontents{
+    float: left;
+    padding: 20px 110px;
+    background: white;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px){
+  .navbar{
+    margin: 0 0 20px 0;
+    background: white;
+    overflow: hidden;
+    max-width: 991px;
+  }
+  .navbar > li{
+    box-sizing: border-box;
+    float:left;
+    position: relative;
+    top: 0;
+    left: -58px;
+    width: 112px;
+    border-right: dashed 1px black; 
+    visibility: hidden;
+  }
+  .navtitle{
+    position: relative;
+    top: 0;
+    left: -58px;
+    padding: 0;
+    width: 500px;
+  }
+  .navbar li a{
+    display: block;
+    padding: 29px 0;
+    width: 100%;
+    text-decoration: none;
+    text-align: center;
+    visibility: hidden;
+  }
+  .navbar li.navtitle a{
+    padding: 10px 0;
+    visibility: hidden;
+  }
+  .navbar li a:hover{
+    background: whitesmoke;
+  }
+  .square{
+    display: block;
+    width: 44px;
+    height: 32px;
+    position: relative;
+    top: 26px;
+    left: 700px;
+    border: 1px solid silver;
+    border-radius: 4px;
+  }
+  .square:hover{
+    background: lightblue;
+  }
+  .menu-trigger,
+  .menu-trigger span {
+    display: inline-block;
+    transition: all .4s;
+    box-sizing: border-box;
+  }
+  .menu-trigger {
+    position: relative;
+    width: 26px;
+    height: 20px;
+  }
+  .menu-trigger span {
+    position: absolute;
+    top: 2px;
+    left: 150px;
+    width: 100%;
+    height: 2px;
+    background-color: silver;
+    border-radius: 4px;
+  }
+  .menu-trigger span:nth-of-type(1) {
+    top: 2px;
+  }
+  .menu-trigger span:nth-of-type(2) {
+    top: 9px;
+  }
+  .menu-trigger span:nth-of-type(3) {
+    top: 16px;
+  }
+}
+@media screen and (max-width: 767px){
+}
