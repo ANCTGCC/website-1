@@ -1,18 +1,19 @@
 body{
   margin: 0;
-  background: url(images/black0028.png);
+  background: url(images/b001.png);
   font-family: "Century Gothic";
 }
 li{
   list-style: none;
 }
 a{
-  color: blue;
+  color: mediumblue;
   text-decoration: none;
   -webkit-tap-highlight-color: lightblue;
 }
 a:hover{
-
+  opacity: 0.8;
+  background: silver;
 }
 @media screen and (min-width: 1200px){
   #gnav{
@@ -61,6 +62,7 @@ a:hover{
     width: 100%;
     background: darkgray;
     box-shadow: 0px 3px 10px 5px rgba(0,0,0,0.5);
+    position: fixed;
   }
   #gnav ul{
     background: whitesmoke;
@@ -107,13 +109,15 @@ a:hover{
   }
 } 
 @media screen and (min-width: 768px) and (max-width: 991px){
+  /*グローバルナビゲーション設定-----------------------*/
   #gnav{
     width: 100%;
-    background: darkgray;
+    /*background: papayawhip;*/
+    background: url(images/b001.gif);
     box-shadow: 0px 3px 10px 5px rgba(0,0,0,0.5);
   }
   .navbar{
-    background: whitesmoke;
+    background: white;
     overflow: hidden;
     width: 728px;
     margin: 0 auto;
@@ -133,16 +137,18 @@ a:hover{
   }
   .navbar li:not(.title){
     margin: 0;
-    background: gray;
+    background: white;
     width: 680px;
   }
   .navbar li:not(.title) a{
     display: block;
     text-align: center;
-    padding: 5px 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: black;
   }
   .navbar li:not(.title) a:hover{
-    background: silver;
+    background: lightcyan;
   }
   .navbar li.title a:hover{
     opacity: 0.8;
@@ -185,42 +191,86 @@ a:hover{
     cursor: pointer;
   }
 
+  .title-bar{
+    width: 100%;
+    /*background: papayawhip;*/
+    background: url(images/b001.gif);
+  }
+  .title-bar-contents{
+    margin: 0 auto;
+    width: 768px;
+    background: url(images/2.png);
+  }
+  .title-bar-contents h1{
+    display: block;
+    padding: 0;
+    margin: 0;
+    padding-left: 30px;
+  }
+  .title-bar-contents p{
+    display: block;
+    padding: 0;
+    padding-left: 30px;
+    margin: 0;
+  }
+  /*メインコンテンツ設定----------------------------*/
 
   .page{
     width: 100%;
-    background: darkgray;
+    /*background: papayawhip;*/
+    background: url(images/b001.gif);
   }
   .main{
     width: 768px;
-    margin: 20px auto 0 auto;
-    background: white;
+    margin: 0 auto;
+    background: url(images/b001.gif);
     overflow: hidden;
     padding: 0;
   }
   .maincontents{
-    width: 546px;
+    width: 544px;
     float: left;
-    background: lightgreen;
+    background: white;
     padding: 20px;
     margin-right: 20px;
+    border: 1px solid silver;
   }
   .maincontents h1{
     text-align: center;
     font-size: 40px;
-    font-family: serif;
+    font-family: "Century Gothic";
+    font-weight: 300;
+    margin: 0;
+    padding-bottom: 20px;
+  }
+  .maincontents h3{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+  }
+  .maincontents p{
+    margin: 0;
+    font-size: 14px;
+  }
+  .section{
+    padding: 10px 0;
+    border-bottom: 1px dashed silver;
+  }
+  p.toukou{
+    font-size: 12px;
+    padding-top: 3px;
   }
   .subcontents{
-    width: 160px;
+    width: 162px;
     float: left;
-    background: lightblue;
     padding: 0;
-    border: 1px solid silver;
-    box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.3);
-
+    /*background: lightblue;
+    box-shadow: 0px 5px 10px 2px rgba(0,0,0,0.3);
+    */
   }
   .about{
-    border: 1px solid black;
-    background: red;
+    border: 1px solid silver;
+    background: white;
   }
   .about h5{
     text-align: center;
@@ -228,7 +278,7 @@ a:hover{
     font-weight: 300;
     padding: 2px 0;
     margin: 0;
-    background: orange;
+    background: skyblue;
     border-bottom: 1px dashed black;
   }
   .about p{
@@ -241,15 +291,83 @@ a:hover{
     margin: 0;
     margin-top: 50px;
     padding: 0;
-    border: 1px solid brown;
-    border-radius: 3px;
+    border: 1px solid skyblue;
+  }
+  .submenu-title{
+    font-size: 15px;
+    padding: 5px 0 5px 15px;
+    background: skyblue;
+    color: white;
+    font-weight: 600;
+    text-shadow: 1px 1px 5px black;
   }
   .submenu li:not(:last-child){
-    border-bottom: 1px solid brown;
+    border-bottom: 1px solid skyblue;
+  }
+  .submenu li i{
+    padding: 0 6px;
   }
   .submenu a{
     display: block;
-    padding: 2px 0 ;
+    padding: 2px 0;
+    font-size: 14px;
+    color: black;
+  }
+  .submenu a:hover{
+    background: lightblue;
+    color: blue;
+  }
+  /*フッター設定-------------------------*/
+
+  .footer-container{
+    padding: 0px;
+    width: 100%;
+    /*background: papayawhip;*/
+    background: url(images/b001.gif);
+  }
+  /*
+  .footer-container a{
+    font-size: 14px;
+  }
+  .footer-nav{
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    width: 768px;
+    margin: 0 auto;
+    background: green;
+    border-top: 1px solid black;
+  }
+  .footer-nav li,.info li{
+    margin: 0;
+    padding: 0;
+  }
+  .footer-nav a{
+    color: white;
+    opacity: 0.6;
+  }
+  .footer-nav a:hover{
+    background: gray;
+  }
+  */
+  .info{
+    background: yellowgreen;
+    color: white;
+    width: 768px;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    font-size: 12px;
+  }
+  .copyright{
+    display: block;
+    float: left;
+    padding: 0 5px;
+  }
+  .info address{
+    float: right;
+    padding: 0 5px;
+    margin-top: 2.5px;
   }
 }
 @media screen and (max-width: 767px){
