@@ -18,16 +18,16 @@ a{
 }
 a:hover{
   opacity: 0.8;
-  background: silver;
 }
 @media screen and (min-width: 1200px){
   #gnav{
     width: 100%;
-    background: darkgray;
+    margin: 0;
+    background: url(images/b001.gif);
   }
   #gnav ul{
-    background: whitesmoke;
-    width: 1200px;
+    background: white;
+    width: 1160px;
     margin: 0 auto;
     position: relative;
     top: 0; left: 0;
@@ -39,20 +39,24 @@ a:hover{
   }/*.nav-home,.nav-game,.nav-aboutus,.nav-fes*/
   .navbar li:not(.title){
     box-sizing: border-box;
-    float:left;
-    background: silver;
-    padding: 20px;
-    text-align: center;
+    float: left;
+    background: white;
+    padding: 27.5px 10px;
+    text-align: center; 
   }
   .navbar li.title{
     width: 404px;
+    padding: 10px 0;
+    margin-right: 50px;
   }
   .navbar li:not(.title) a{
     width: 100%;
-    padding: 0;
+    padding: 27.5px 10px;
+    color: black;
   }
   .navbar li:not(.title) a:hover{
-      
+    background: white;
+    opacity: 0.4;
   }
   .logo{
     vertical-align: middle;
@@ -64,14 +68,169 @@ a:hover{
 
   }
 
-  /*メインコンテンツ*/
+  .title-bar{
+    width: 100%;
+    background: url(images/b001.gif);
+  }
+  .title-bar-contents{
+    margin: 0 auto;
+    width: 1200px;
+    background: url(images/2.png);
+  }
+  .title-bar-contents h1{
+    display: block;
+    padding: 0;
+    padding-bottom: 10px;
+    margin: 0;
+    padding-left: 45px;
+    font-family: "SAO UI";
+  }
+  .title-bar-contents p{
+    display: block;
+    padding: 0;
+    padding-left: 45px;
+    margin: 0;
+  }
+  .title-bar-space{
+    width: 1200px;
+  }
+  /*メインコンテンツ-------*/
   .page{
     width: 100%;
+    /*background: papayawhip;*/
+    background: url(images/b001.gif);
   }
   .main{
-    width: 1200px;
+    width: 1200px;/*768*/
     margin: 0 auto;
+    background: url(images/b001.gif);
+    overflow: hidden;
+    padding: 0;
   }
+  .maincontents{
+    width: 838px;/*544*/
+    float: left;
+    background: white;
+    padding: 20px;/*20*/
+    margin-right: 20px;
+    border: 1px solid silver;
+  }
+  .maincontents h1{
+    text-align: center;
+    font-size: 40px;
+    font-family: "SAO UI";
+    font-weight: 300;
+    margin: 0;
+    padding-bottom: 20px;
+  }
+  .maincontents h3{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+  }
+  .maincontents p{
+    margin: 0;
+    font-size: 14px;
+  }
+  .section{
+    padding: 10px 0;
+    border-bottom: 1px dashed silver;
+  }
+  .section:last-child{
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .section a:hover{
+    color: lightblue;
+    opacity: 1;
+  }
+  p.toukou{
+    font-size: 12px;
+    padding-top: 3px;
+  }
+  .subcontents{
+    width: 300px;/*162*/
+    float: left;
+    padding: 0;
+  }
+  .about{
+    border: 1px solid silver;
+    background: white;
+  }
+  .about h5{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 300;
+    padding: 2px 0;
+    margin: 0;
+    background: skyblue;
+    border-bottom: 1px dashed black;
+  }
+  .about p{
+    display: block;
+    margin: 0;
+    padding: 2px 7px;
+    font-size: 14px;
+  }
+  .submenu ul{
+    margin: 0;
+    margin-top: 50px;
+    padding: 0;
+    border: 1px solid skyblue;
+    background: white;
+  }
+  .submenu-title{
+    font-size: 15px;
+    padding: 5px 0 5px 15px;
+    background: skyblue;
+    color: white;
+    font-weight: 600;
+    text-shadow: 1px 1px 5px black;
+  }
+  .submenu li:not(:last-child){
+    border-bottom: 1px solid skyblue;
+  }
+  .submenu li i{
+    padding: 0 6px;
+  }
+  .submenu a{
+    display: block;
+    padding: 2px 0;
+    font-size: 14px;
+    color: black;
+  }
+  .submenu a:hover{
+    background: lightblue;
+    color: blue;
+  }
+  /*フッター設定-------------------------*/
+
+  .footer-container{
+    padding: 0px;
+    width: 100%;
+    /*background: papayawhip;*/
+    background: url(images/b001.gif);
+  }
+  .info{
+    background: yellowgreen;
+    color: white;
+    width: 1200px;/*768*/
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    font-size: 12px;
+  }
+  .copyright{
+    display: block;
+    float: left;
+    padding: 0 5px;
+  }
+  .info address{
+    float: right;
+    padding: 0 5px;
+    margin-top: 2.5px;
+  }
+
   #jQueryPush{
     display: none;
   }
@@ -84,7 +243,6 @@ a:hover{
   /*グローバルナビゲーション設定-----------------------*/
   #gnav{
     width: 100%;
-    /*background: papayawhip;*/
     background: url(images/b001.gif);
     box-shadow: 0px 3px 10px 5px rgba(0,0,0,0.5);
   }
@@ -120,7 +278,8 @@ a:hover{
     color: black;
   }
   .navbar li:not(.title) a:hover{
-    background: lightcyan;
+    opacity: 0.4;
+    background: none;
   }
   .navbar li.title a:hover{
     opacity: 0.8;
@@ -165,7 +324,6 @@ a:hover{
 
   .title-bar{
     width: 100%;
-    /*background: papayawhip;*/
     background: url(images/b001.gif);
   }
   .title-bar-contents{
@@ -274,6 +432,7 @@ a:hover{
     margin-top: 50px;
     padding: 0;
     border: 1px solid skyblue;
+    background: white;
   }
   .submenu-title{
     font-size: 15px;
@@ -393,7 +552,8 @@ a:hover{
     color: black;
   }
   .navbar li:not(.title) a:hover{
-    background: lightcyan;
+    background: none;
+    opacity: 0.4;
   }
   .navbar li.title a:hover{
     opacity: 0.8;
@@ -450,7 +610,7 @@ a:hover{
     display: block;
     padding: 0;
     margin: 0;
-    font-size: 14px;
+    font-size: 18px;
   }
   .title-bar-contents p{
     display: block;
@@ -481,7 +641,7 @@ a:hover{
   .maincontents h1{
     text-align: center;
     font-size: 24px;
-    font-family: "Century Gothic";
+    font-family: "SAO UI";
     font-weight: 300;
     margin: 0;
     padding: 0;
