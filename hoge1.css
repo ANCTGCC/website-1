@@ -16,9 +16,12 @@ a{
   text-decoration: none;
   -webkit-tap-highlight-color: lightblue;
 }
-a:hover{
-  opacity: 0.8;
+a:visited{
+  color: navy;
 }
+
+
+
 @media screen and (min-width: 1200px){
   #gnav{
     width: 100%;
@@ -61,13 +64,13 @@ a:hover{
   .logo{
     vertical-align: middle;
   }
+  .logo:hover{
+    opacity: 0.6;
+  }
   .navbar li.title a{
     padding: 0;
   }
-  .navbar li:not(){
-
-  }
-
+  /*タイトルバー-----------------------*/
   .title-bar{
     width: 100%;
     background: url(images/b001.gif);
@@ -94,7 +97,7 @@ a:hover{
   .title-bar-space{
     width: 1200px;
   }
-  /*メインコンテンツ-------*/
+  /*メインコンテンツ--------------------*/
   .page{
     width: 100%;
     /*background: papayawhip;*/
@@ -117,23 +120,40 @@ a:hover{
   }
   .maincontents h1{
     text-align: center;
-    font-size: 40px;
+    font-size: 35px;
     font-family: "SAO UI";
-    font-weight: 300;
+    font-weight: 400;
     margin: 0;
-    padding-bottom: 20px;
+    position: relative;
+  }
+  .maincontents h1:before,.maincontents h1:after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    width: 60px;
+    height: 3px;
+    border-top: solid 1px black;
+    border-bottom: solid 1px black;
+  }
+  .maincontents h1:before {left: 37%;}
+  .maincontents h1:after {right: 37%;}
+
+  .maincontents h1:first-letter{
+    font-size: 45px;
+    color: red;
   }
   .maincontents h3{
     margin: 0;
     padding: 0;
-    font-size: 16px;
+    font-size: 18px;
   }
   .maincontents p{
     margin: 0;
-    font-size: 14px;
+    font-size: 16px;
   }
   .section{
-    padding: 10px 0;
+    padding: 20px 0 10px 0;
     border-bottom: 1px dashed silver;
   }
   .section:last-child{
@@ -141,13 +161,15 @@ a:hover{
     padding-bottom: 0;
   }
   .section a:hover{
-    color: lightblue;
-    opacity: 1;
+    color: navy;
+    text-decoration: underline;
   }
   p.toukou{
-    font-size: 12px;
+    font-size: 14px;
     padding-top: 3px;
   }
+
+  /*サブコンテンツ----------------------*/
   .subcontents{
     width: 300px;/*162*/
     float: left;
@@ -159,9 +181,9 @@ a:hover{
   }
   .about h5{
     text-align: center;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 300;
-    padding: 2px 0;
+    padding: 4px 0;
     margin: 0;
     background: skyblue;
     border-bottom: 1px dashed black;
@@ -170,7 +192,7 @@ a:hover{
     display: block;
     margin: 0;
     padding: 2px 7px;
-    font-size: 14px;
+    font-size: 16px;
   }
   .submenu ul{
     margin: 0;
@@ -180,7 +202,7 @@ a:hover{
     background: white;
   }
   .submenu-title{
-    font-size: 15px;
+    font-size: 17px;
     padding: 5px 0 5px 15px;
     background: skyblue;
     color: white;
@@ -195,15 +217,15 @@ a:hover{
   }
   .submenu a{
     display: block;
-    padding: 2px 0;
-    font-size: 14px;
+    padding: 4px 0;
+    font-size: 16px;
     color: black;
   }
   .submenu a:hover{
     background: lightblue;
     color: blue;
   }
-  /*フッター設定-------------------------*/
+  /*フッター設定------------------------*/
 
   .footer-container{
     padding: 0px;
@@ -231,6 +253,7 @@ a:hover{
     margin-top: 2.5px;
   }
 
+
   #jQueryPush{
     display: none;
   }
@@ -238,6 +261,8 @@ a:hover{
     display: none!important;
   }
 }
+
+
 
 @media screen and (min-width: 768px) and (max-width: 1199px){
   /*グローバルナビゲーション設定-----------------------*/
@@ -372,13 +397,30 @@ a:hover{
   }
   .maincontents h1{
     text-align: center;
-    font-size: 40px;
+    font-size: 35px;
     font-family: "Century Gothic";
     font-family: "SAO UI";
     font-weight: 300;
     margin: 0;
-    padding-bottom: 20px;
+    position: relative;
   }
+  .maincontents h1:first-letter{
+    font-size: 45px;
+    color: red;
+  }
+  .maincontents h1:before,.maincontents h1:after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    width: 40px;
+    height: 3px;
+    border-top: solid 1px black;
+    border-bottom: solid 1px black;
+  }
+  .maincontents h1:before {left: 32%;}
+  .maincontents h1:after {right: 32%;}
+
   .maincontents h3{
     margin: 0;
     padding: 0;
@@ -389,7 +431,7 @@ a:hover{
     font-size: 14px;
   }
   .section{
-    padding: 10px 0;
+    padding: 20px 0 10px 0;
     border-bottom: 1px dashed silver;
   }
   .section:last-child{
