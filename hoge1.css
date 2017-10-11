@@ -44,8 +44,9 @@ a:visited{
     box-sizing: border-box;
     float: left;
     background: white;
-    padding: 27.5px 10px;
-    text-align: center; 
+    display: inline-block;
+    text-align: center;
+    padding: 27.5px 0px;
   }
   .navbar li.title{
     width: 404px;
@@ -53,10 +54,12 @@ a:visited{
     margin-right: 50px;
   }
   .navbar li:not(.title) a{
-    width: 100%;
-    padding: 27.5px 10px;
+    box-sizing: border-box;
+    width: auto;
+    display: block;
     color: black;
-  }
+    padding: 0 15px;
+  }  
   .navbar li:not(.title) a:hover{
     background: white;
     opacity: 0.4;
@@ -70,6 +73,8 @@ a:visited{
   .navbar li.title a{
     padding: 0;
   }
+
+
   /*タイトルバー-----------------------*/
   .title-bar{
     width: 100%;
@@ -83,10 +88,14 @@ a:visited{
   .title-bar-contents h1{
     display: block;
     padding: 0;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
     margin: 0;
     padding-left: 45px;
     font-family: "SAO UI";
+  }
+  .title-bar-contents h1:before{
+    font-family: "FontAwesome";
+    content: "\f135  ";
   }
   .title-bar-contents p{
     display: block;
@@ -125,19 +134,30 @@ a:visited{
     font-weight: 400;
     margin: 0;
     position: relative;
+    display: inline-block;
+    left: 42%;
+    width: 100px;
+
+    padding: 2px 20px;
+    border: 2px solid black;
+    border-radius: 3px 0 3px 0;
   }
   .maincontents h1:before,.maincontents h1:after{
     content: "";
     position: absolute;
-    top: 50%;
-    display: inline-block;
-    width: 60px;
-    height: 3px;
-    border-top: solid 1px black;
-    border-bottom: solid 1px black;
+    width: 10px;
+    height: 10px;
+    border: solid 2px black;
+    border-radius: 50%;
   }
-  .maincontents h1:before {left: 37%;}
-  .maincontents h1:after {right: 37%;}
+  .maincontents h1:before{
+    top: -12px;
+    left: -12px;
+  }
+  .maincontents h1:after{
+    bottom: -12px;
+    right: -12px;
+  }
 
   .maincontents h1:first-letter{
     font-size: 45px;
@@ -168,6 +188,10 @@ a:visited{
     font-size: 14px;
     padding-top: 3px;
   }
+  p.toukou:before{
+    font-family: "FontAwesome";
+    content: "  \f040";
+  }
 
   /*サブコンテンツ----------------------*/
   .subcontents{
@@ -187,6 +211,12 @@ a:visited{
     margin: 0;
     background: skyblue;
     border-bottom: 1px dashed black;
+  }
+  .about h5:before{
+    content: "/　　　　　";
+  }
+  .about h5:after{
+    content: "　　　　　/";
   }
   .about p{
     display: block;
@@ -208,6 +238,10 @@ a:visited{
     color: white;
     font-weight: 600;
     text-shadow: 1px 1px 5px black;
+  }
+  .submenu-title:after{
+    /*font-family: "FontAwesome";
+    content: "　\f0d7";*/
   }
   .submenu li:not(:last-child){
     border-bottom: 1px solid skyblue;
@@ -359,7 +393,7 @@ a:visited{
   .title-bar-contents h1{
     display: block;
     padding: 0;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
     margin: 0;
     padding-left: 30px;
     font-family: "SAO UI";
