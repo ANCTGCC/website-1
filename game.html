@@ -6,10 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Game Creator's Club</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script type="text/javascript" src="js/gcc.js"></script>
   <link rel="stylesheet" href="./hoge1.css">
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.10/font-awesome-animation.css' type='text/css' media='all' />
-
+  
   <script type="text/javascript">
     $(function(){
       $("#jQueryBox1").css("display","none");
@@ -20,51 +21,6 @@
         $("#jQueryBox2").slideToggle("10");
       });
     });
-
-    // グローバル変数
-    var syncerTimeout = null;
-    // 一連の処理
-    $(function(){
-      // スクロールイベントの設定
-      $(window).scroll(function(){
-        // 1秒ごとに処理
-        if(syncerTimeout == null){
-          // セットタイムアウトを設定
-          syncerTimeout = setTimeout(function(){
-            // 対象のエレメント
-            var element = $('#page-top');
-            // 現在、表示されているか？
-            var visible = element.is(':visible');
-            // 最上部から現在位置までの距離を取得して、変数[now]に格納
-            var now = $(window).scrollTop();
-            // 最下部から現在位置までの距離を計算して、変数[under]に格納
-            var under = $('body').height() - (now + $(window).height());
-            // 最上部から現在位置までの距離(now)が800以上かつ
-            // 最下部から現在位置までの距離(under)が100px以上かつ…
-            if(now > 800 && 100 < under){
-              // 非表示状態だったら
-              if(!visible){
-              // [#page-top]をゆっくりフェードインする
-                element.fadeIn('slow');
-              }
-            }
-            // 800px以下かつ表示状態だったら
-            else if(visible){
-            // [#page-top]をゆっくりフェードアウトする
-              element.fadeOut('slow') ;
-            }
-            // フラグを削除
-            syncerTimeout = null;
-          } ,1000);
-        }
-      });
-      // クリックイベントを設定する
-      $('#move-page-top').click(function(){
-        // スムーズにスクロールする
-        $('html,body').animate({scrollTop:0},'slow');
-      });
-    });
-ダウンロード
   </script>
 </head>
 
@@ -84,14 +40,14 @@
       <div id=jQueryBox1>
         <li class="nav-home"><a href="./index.html"><i class="fa fa-home" aria-hidden="true"></i>  ホーム</a></li>
         <li class="nav-game"><a href="./game.html"><i class="fa fa-gamepad" aria-hidden="true"></i>  作品の紹介・配布</a></li>
-        <li class="nav-aboutus"><a href=""><i class="fa fa-user" aria-hidden="true"></i>  私たちについて</a></li>
-        <li class="nav-fes"><a href=""><i class="fa fa-magic" aria-hidden="true"></i>  高専祭</a></li>
+        <li class="nav-aboutus"><a href="./aboutus.html"><i class="fa fa-user" aria-hidden="true"></i>  私たちについて</a></li>
+        <li class="nav-fes"><a href="./fes.html"><i class="fa fa-magic" aria-hidden="true"></i>  高専祭</a></li>
       </div>
       <div id=jQueryBox2>
         <li class="nav-home"><a href="./index.html"><i class="fa fa-home" aria-hidden="true"></i>  ホーム</a></li>
         <li class="nav-game"><a href="./game.html"><i class="fa fa-gamepad" aria-hidden="true"></i>  作品の紹介・配布</a></li>
-        <li class="nav-aboutus"><a href=""><i class="fa fa-user" aria-hidden="true"></i>  私たちについて</a></li>
-        <li class="nav-fes"><a href=""><i class="fa fa-magic" aria-hidden="true"></i>  高専祭</a></li>
+        <li class="nav-aboutus"><a href="./aboutus.html"><i class="fa fa-user" aria-hidden="true"></i>  私たちについて</a></li>
+        <li class="nav-fes"><a href="./fes.html"><i class="fa fa-magic" aria-hidden="true"></i>  高専祭</a></li>
       </div>
     </ul>
   </nav>
@@ -107,7 +63,7 @@
   <div class="page">
     <div class="main">
       <div class="maincontents">
-        <h1>GAMES</h1>
+        <div class="main-title"><h1>GAMES</h1></div>
         <div class="description">
           <img src="images/落書き世界タイトル.png" class="game-img">
           <div class="game-section">
