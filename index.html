@@ -8,6 +8,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
   <link rel="stylesheet" href="./hoge1.css">
   <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.10/font-awesome-animation.css' type='text/css' media='all' />
 
   <script type="text/javascript">
     $(function(){
@@ -17,8 +18,66 @@
         // 「id="jQueryBox"」の表示、非表示を切り替える
         $("#jQueryBox1").slideToggle("10");
         $("#jQueryBox2").slideToggle("10");
+      });
     });
-    });
+    
+    // グローバル変数
+    var syncerTimeout = null ;
+
+    // 一連の処理
+    $(function()
+    {
+    // スクロールイベントの設定
+      $(window).scroll(function()
+    {
+    // 1秒ごとに処理
+    if(syncerTimeout==null)
+    {
+      // セットタイムアウトを設定
+      syncerTimeout = setTimeout(function(){
+        // 対象のエレメント
+        var element = $('#page-top') ;
+        // 現在、表示されているか？
+        var visible = element.is(':visible') ;
+        // 最上部から現在位置までの距離を取得して、変数[now]に格納
+        var now = $(window).scrollTop() ;
+        // 最下部から現在位置までの距離を計算して、変数[under]に格納
+        var under = $('body').height() - ( now + $(window).height() ) ;
+        // 最上部から現在位置までの距離(now)が1500以上かつ
+        // 最下部から現在位置までの距離(under)が200px以上かつ…
+        if( now > 1500 && 200 < under )
+        {
+          // 非表示状態だったら
+          if( !visible )
+          {
+            // [#page-top]をゆっくりフェードインする
+            element.fadeIn( 'slow' ) ;
+          }
+        }
+
+        // 1500px以下かつ
+        // 表示状態だったら
+        else if( visible )
+        {
+          // [#page-top]をゆっくりフェードアウトする
+          element.fadeOut( 'slow' ) ;
+        }
+
+        // フラグを削除
+        syncerTimeout = null ;
+      } , 1000 ) ;
+    }
+  } ) ;
+
+  // クリックイベントを設定する
+  $( '#move-page-top' ).click(
+    function()
+    {
+      // スムーズにスクロールする
+      $( 'html,body' ).animate( {scrollTop:0} , 'slow' ) ;
+    }
+  ) ;
+} ) 
   </script>
 </head>
 
@@ -53,7 +112,7 @@
   <!--タイトルバー-->
   <div class="title-bar">
     <div class="title-bar-contents">
-      <h1>Welcome to the GCC</h1><p>このページではニュースを掲載しています。</p>
+      <h1><i class="fa fa-rocket" aria-hidden="true"></i> Welcome to the GCC</h1><p>このページではニュースを掲載しています。</p>
     </div>
     <div class="title-bar-space">　</div>
   </div>

@@ -8,6 +8,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
   <link rel="stylesheet" href="./hoge1.css">
   <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.10/font-awesome-animation.css' type='text/css' media='all' />
 
   <script type="text/javascript">
     $(function(){
@@ -17,8 +18,53 @@
         // 「id="jQueryBox"」の表示、非表示を切り替える
         $("#jQueryBox1").slideToggle("10");
         $("#jQueryBox2").slideToggle("10");
+      });
     });
+
+    // グローバル変数
+    var syncerTimeout = null;
+    // 一連の処理
+    $(function(){
+      // スクロールイベントの設定
+      $(window).scroll(function(){
+        // 1秒ごとに処理
+        if(syncerTimeout == null){
+          // セットタイムアウトを設定
+          syncerTimeout = setTimeout(function(){
+            // 対象のエレメント
+            var element = $('#page-top');
+            // 現在、表示されているか？
+            var visible = element.is(':visible');
+            // 最上部から現在位置までの距離を取得して、変数[now]に格納
+            var now = $(window).scrollTop();
+            // 最下部から現在位置までの距離を計算して、変数[under]に格納
+            var under = $('body').height() - (now + $(window).height());
+            // 最上部から現在位置までの距離(now)が800以上かつ
+            // 最下部から現在位置までの距離(under)が100px以上かつ…
+            if(now > 800 && 100 < under){
+              // 非表示状態だったら
+              if(!visible){
+              // [#page-top]をゆっくりフェードインする
+                element.fadeIn('slow');
+              }
+            }
+            // 800px以下かつ表示状態だったら
+            else if(visible){
+            // [#page-top]をゆっくりフェードアウトする
+              element.fadeOut('slow') ;
+            }
+            // フラグを削除
+            syncerTimeout = null;
+          } ,1000);
+        }
+      });
+      // クリックイベントを設定する
+      $('#move-page-top').click(function(){
+        // スムーズにスクロールする
+        $('html,body').animate({scrollTop:0},'slow');
+      });
     });
+ダウンロード
   </script>
 </head>
 
@@ -53,7 +99,7 @@
   <!--タイトルバー-->
   <div class="title-bar">
     <div class="title-bar-contents">
-      <h1>Welcome to the GCC</h1><p>このページは部員が作ったゲームを紹介しています。</p>
+      <h1><i class="fa fa-rocket" aria-hidden="true"></i> Welcome to the GCC</h1><p>このページは部員が作ったゲームを紹介しています。</p>
     </div>
     <div class="title-bar-space">　</div>
   </div>
@@ -62,17 +108,192 @@
     <div class="main">
       <div class="maincontents">
         <h1>GAMES</h1>
-          <div class="description">
+        <div class="description">
+          <img src="images/落書き世界タイトル.png" class="game-img">
+          <div class="game-section">
             <h3>落書き世界の孔明な罠</h3>
             <p>落書きの中でとあるよくわからんやつが孔明だらけの鬼畜なステージを渡り歩くという鬼畜2Dアクションゲームです。この鬼畜難易度を無事クリアすることができるのか！？</p>
+            <ul>
+              <li>製作者 : はぐめた、こいのぼり</li>
+              <li>ジャンル : 即死系トラップアクション</li>
+              <li><i class="fa fa-file-o" aria-hidden="true"></i> : ダウンロードはこちら</li>
+            </ul>
+          </div>
+        </div>  
+        <div class="description">
+          <img src="images/AUS.png" class="game-img">
+          <div class="game-section">
             <h3>AUS</h3>
             <p>Alpaca Unity Shooting。次々に襲い掛かる敵機を撃ち落とし、ハイスコアを出せ！</p>
+            <ul>
+              <li>製作者 : alpaca</li>
+              <li>ジャンル : 周回系弾幕シューティング</li>
+              <li><i class="fa fa-file-o" aria-hidden="true"></i> : ダウンロードはこちら</li>
+            </ul>
+          </div>
+        </div>
+        <div class="description">
+          <img src="images/とある少年のデスロード.png" class="game-img">
+          <div class="game-section">  
             <h3>とある少年の通学道路(デスロード)</h3>
             <p>試合を終え家路へ向かうサッカー少年。疲れからか、不幸にも黒塗りの高級車が飛び交う道路へと飛び出してしまう。果たして彼はこの窮地を乗り切ることができるのか？</p>
             <ul>
-              <li></li>
+              <li>製作者 : snow</li>
+              <li>ジャンル : 無駄な操作をしまくる避けゲー</li>
+              <li><i class="fa fa-file-o" aria-hidden="true"></i> : ダウンロードはこちら</li>
             </ul>
-          </div> 
+          </div>
+        </div>
+        <div class="description">
+          <img src="images/VIRTUAL_LINK_WORLD_TITLE.png" class="game-img">
+          <div class="game-section">  
+            <h3>VIRTUAL LINK WORLD</h3>
+            <p>GCC過去作ステージと接続し、その世界を冒険する壮大なアクションゲーム！</p>
+            <ul>
+              <li>製作者 : はぐめた</li>
+              <li>ジャンル : 2Dスクロールアクション</li>
+              <li><i class="fa fa-file-o" aria-hidden="true"></i> : ダウンロードはこちら</li>
+            </ul>
+          </div>
+        </div>
+        <div class="description">
+          <img src="images/BallStar.png" class="game-img">
+          <div class="game-section">  
+            <h3>BallStar+</h3>
+            <p>このゲームはボールを操作して星に辿りつく王道アクションゲームです。☆８ステージをはじめ、空前絶後の超難易度ステージ達ををあなたは無事全てクリアできるのか！？</p>
+            <ul>
+              <li>製作者 : はぐめた</li>
+              <li>ジャンル : アクション</li>
+              <li><i class="fa fa-file-o" aria-hidden="true"></i> : ダウンロードはこちら</li>
+            </ul>
+          </div>
+        </div>
+        <div class="description">
+          <img src="images/MAZE.png" class="game-img">
+          <div class="game-section">  
+            <h3>MAZE</h3>
+            <p>使うのはエンターキーと方向キーぐらいですとても簡単です。ゲームを始めたと同時にカウントダウンが始まるので素早く動かしましょう。また、OgreはチャレンジステージなのでNormalを先にプレイしてから臨みましょう。</p>
+            <ul>
+              <li>製作者 : Tatsuya</li>
+              <li>ジャンル : 迷路</li>
+              <li><i class="fa fa-file-o" aria-hidden="true"></i> : ダウンロードはこちら</li>
+            </ul>
+          </div>
+        </div>
+        <div class="description">
+          <img src="images/boon.png" class="game-img">
+          <div class="game-section">  
+            <h3>BOOON</h3>
+            <p>ぶ～んとするゲームです。基本的にはスペースキーでジャンプ、ライトキーで移動。３０秒でどれだけ進めるかでスコアが決まります。ぶ～んの機嫌がいいとポップなジャンプ音が流れます。基本的にぶ～んは足腰が弱いので連続ジャンプは控えてあげてください。</p>
+            <ul>
+              <li>製作者 : snow</li>
+              <li>ジャンル : は？</li>
+              <li><i class="fa fa-file-o" aria-hidden="true"></i> : ダウンロードはこちら</li>
+            </ul>
+          </div>
+        </div>
+        <div class="description">
+          <img src="images/lucy.png" class="game-img">
+          <div class="game-section">
+            <h3>Lucy</h3>
+            <p>開発の遅れが原因で、高専祭で展示することの叶わなかった謎のゲーム。Web 配布にて登場予定だが、その詳細は GCC 部員にさえ秘匿されている。続報を待て！</p>
+            <ul>
+              <li>製作者 : ???</li>
+              <li>ジャンル : ???</li>
+              <li><i class="fa fa-file-o" aria-hidden="true"></i> : ダウンロードはこちら</li>
+            </ul>
+          </div>
+        </div>
+        <div class="description">
+          <img src="images/BallStar_ganso.png" class="game-img">
+          <div class="game-section">
+            <h3>BallStar</h3>
+            <p>ボールで星を取るゲーム。</p>
+            <ul>
+              <li>製作者 : はぐめた、Shuffreew</li>
+              <li>ジャンル : アクション</li>
+              <li>その他 ： CD配布版からアップデートを行いました（1.0.1 ： 2014/11/01）</li>
+              <li><i class="fa fa-file-o" aria-hidden="true"></i> : ダウンロードはこちら</li>
+            </ul>
+          </div>
+        </div>
+        <div class="description">
+          <img src="images/Firewall.png" class="game-img">
+          <div class="game-section">
+            <h3>FIREWALL</h3>
+            <p>あなたはファイアーウォールです。</p>
+            <ul>
+              <li>製作者 : YuZakuro</li>
+              <li>ジャンル : Puzzle</li>
+              <li><i class="fa fa-file-o" aria-hidden="true"></i> : ダウンロードはこちら</li>
+            </ul>
+          </div>
+        </div>
+        <div class="description">
+          <img src="images/SakuraAS.png" class="game-img">
+          <div class="game-section">
+            <h3>さくらエスタシオン 朱き社の白狐</h3>
+            <p>狐少女らが葉っぱや絵馬を敵に浴びせて倒すゲームです。</p>
+            <ul>
+              <li>製作者 : もにょ</li>
+              <li>ジャンル : 和風テイストワイド画面縦スクロール型狐耳弾幕シューティング</li>
+              <li>その他　：　高専祭展示版からアップデートを行いました（ver. 1.04　：　2014/11/02）戦闘<a href="">BGM</a>が単体で公開されました。</li>
+              <li><i class="fa fa-file-o" aria-hidden="true"></i> : ダウンロードはこちら</li>
+            </ul>
+          </div>
+        </div>
+        <div class="description">
+          <img src="images/SummationHex.png" class="game-img">
+          <div class="game-section">
+            <h3>SUMMATIONHEX</h3>
+            <p>シンプルで奥が深い足し算アクションパズルです。</p>
+            <ul>
+              <li>製作者 : Reanisz</li>
+              <li>ジャンル : Puzzle</li>
+              <li><i class="fa fa-file-o" aria-hidden="true"></i> : ダウンロードはこちら</li>
+            </ul>
+          </div>
+        </div>
+        <div class="description">
+          <img src="images/Kikuhime.png" class="game-img">
+          <div class="game-section">
+            <h3>菊姫様の周遊流記</h3>
+            <p>お嬢様と従者さんのゆるふわ旅行記付きすごろく</p>
+            <ul>
+              <li>製作者 : 夜叉</li>
+              <li>ジャンル : すごろく</li>
+              <li>その他 ： CD配布版からアップデートを行いました（ver. 1.01 ： 2014/11/02）</li>
+              <li><i class="fa fa-file-o" aria-hidden="true"></i> : ダウンロードはこちら</li>
+            </ul>
+          </div>
+        </div>
+        <!--
+        <div class="description">
+          <img src="images/.png" class="game-img">
+          <div class="game-section">
+            <h3></h3>
+            <p></p>
+            <ul>
+              <li>製作者 : </li>
+              <li>ジャンル : </li>
+              <li><i class="fa fa-file-o" aria-hidden="true"></i> : ダウンロードはこちら</li>
+            </ul>
+          </div>
+        </div>
+        <div class="description">
+          <img src="images/.png" class="game-img">
+          <div class="game-section">
+            <h3></h3>
+            <p></p>
+            <ul>
+              <li>製作者 : </li>
+              <li>ジャンル : </li>
+              <li><i class="fa fa-file-o" aria-hidden="true"></i> : ダウンロードはこちら</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      --> 
       </div>
 
   <!--サブコンテンツ-->    
@@ -103,6 +324,10 @@
             <li><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>2013年度高専祭</a></li>
           </ul>
         </nav>
+ 
+        <div id="page-top" class="page-top">
+          <p><a id="move-page-top" class="move-page-top"><i class="fa fa-chevron-circle-up" aria-hidden="true"></i> TOPへ</a></p>
+        </div>
       </div>
     </div>
   </div>

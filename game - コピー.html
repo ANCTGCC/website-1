@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Game Creator's Club</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <link rel="stylesheet" href="./hoge1.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+
+  <script type="text/javascript">
+    $(function(){
+      $("#jQueryBox1").css("display","none");
+    // 「id="jQueryPush"」がクリックされた場合
+      $("#jQueryPush").click(function(){
+        // 「id="jQueryBox"」の表示、非表示を切り替える
+        $("#jQueryBox1").slideToggle("10");
+        $("#jQueryBox2").slideToggle("10");
+    });
+    });
+  </script>
+</head>
+
+<body>
+  <header class="header">
+  <!--グローバルナビ-->
+  <nav id="gnav">
+    <ul class="navbar">
+      <li class="title"><a href=""><img src="images/Logo.png" class="logo"></a><a href=""><img src="images/logo2.jpg" class="logo2"></a></li>
+      <div id="jQueryPush">
+        <div class="menu">
+          <div class="menu1"></div>
+          <div class="menu2"></div>
+          <div class="menu3"></div>
+        </div>
+      </div>
+      <div id=jQueryBox1>
+        <li class="nav-home"><a href="./index.html"><i class="fa fa-home" aria-hidden="true"></i>  ホーム</a></li>
+        <li class="nav-game"><a href="./game.html"><i class="fa fa-gamepad" aria-hidden="true"></i>  作品の紹介・配布</a></li>
+        <li class="nav-aboutus"><a href=""><i class="fa fa-user" aria-hidden="true"></i>  私たちについて</a></li>
+        <li class="nav-fes"><a href=""><i class="fa fa-magic" aria-hidden="true"></i>  高専祭</a></li>
+      </div>
+      <div id=jQueryBox2>
+        <li class="nav-home"><a href="./index.html"><i class="fa fa-home" aria-hidden="true"></i>  ホーム</a></li>
+        <li class="nav-game"><a href="./game.html"><i class="fa fa-gamepad" aria-hidden="true"></i>  作品の紹介・配布</a></li>
+        <li class="nav-aboutus"><a href=""><i class="fa fa-user" aria-hidden="true"></i>  私たちについて</a></li>
+        <li class="nav-fes"><a href=""><i class="fa fa-magic" aria-hidden="true"></i>  高専祭</a></li>
+      </div>
+    </ul>
+  </nav>
+  </header>
+  <!--タイトルバー-->
+  <div class="title-bar">
+    <div class="title-bar-contents">
+      <h1>Welcome to the GCC</h1><p>このページは部員が作ったゲームを紹介しています。</p>
+    </div>
+    <div class="title-bar-space">　</div>
+  </div>
+  <!--メインコンテンツ-->
+  <div class="page">
+    <div class="main">
+      <div class="maincontents">
+        <h1>GAMES</h1>
+          <div class="description">
+            <h3>落書き世界の孔明な罠</h3>
+            <p>落書きの中でとあるよくわからんやつが孔明だらけの鬼畜なステージを渡り歩くという鬼畜2Dアクションゲームです。この鬼畜難易度を無事クリアすることができるのか！？</p>
+            <h3>AUS</h3>
+            <p>Alpaca Unity Shooting。次々に襲い掛かる敵機を撃ち落とし、ハイスコアを出せ！</p>
+            <h3>とある少年の通学道路(デスロード)</h3>
+            <p>試合を終え家路へ向かうサッカー少年。疲れからか、不幸にも黒塗りの高級車が飛び交う道路へと飛び出してしまう。果たして彼はこの窮地を乗り切ることができるのか？</p>
+            <ul>
+              <li></li>
+            </ul>
+          </div> 
+      </div>
+
+  <!--サブコンテンツ-->    
+      <div class="subcontents">
+        <div class="about">
+          <h5>About this site</h5><p>ここは明石高専ゲーム創作研究部のサイトです。部員が作ったゲームを遊んだり、落としたりできます。ゆっくりしていってね！</p>
+        </div>
+        <nav class="submenu">
+          <ul>
+            <li class="submenu-title">ホーム</li>
+            <li><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>ニュース</a></li>
+
+            <li class="submenu-title">作品紹介・配布</li>
+            <li><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>シューティング</a></li>
+            <li><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>アクション</a></li>
+            <li><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>パズル・その他</a></li>
+
+
+            <li class="submenu-title">私たちについて</li>
+            <li><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>主活動</a></li>
+            <li><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>活動場所</a></li>
+
+            <li class="submenu-title">高専祭</li>
+            <li><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>2017年度高専祭</a></li>
+            <li><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>2016年度高専祭</a></li>
+            <li><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>2015年度高専祭</a></li>
+            <li><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>2014年度高専祭</a></li>
+            <li><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>2013年度高専祭</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <!--サイトマップ-->
+  <footer>
+    <div class="footer-container">
+      <!--
+      <nav class="footer-nav">
+        <ul>
+          <li>About</li>
+          <li><a href="">お知らせ</a></li>
+          <li><a href="">features</a></li>
+          <li><a href="">運営</a></li>
+        </ul>
+        <ul>
+          <li>other</li>
+          <li><a href="">other</a></li>
+          <li><a href="">other</a></li>
+        </ul>
+      </nav>
+    -->
+      <div class="footer-bar-space">　</div>
+      <div class="info">
+        <p class="copyright"><i class="fa fa-copyright" aria-hidden="true"></i> 2017 明石高専ゲーム創作研究部</p>
+      <address>明石高専ゲーム創作研究部<br>兵庫県 明石市 魚住町 西岡 679-3<br></address>
+      </div>    
+    </div>
+  </footer>
+</body>
+</html>
