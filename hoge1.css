@@ -212,6 +212,7 @@ a:visited{
     margin: 0;
     font-size: 16px;
   }
+  /*ホームのメインコンテンツ------*/
   .section{
     padding: 20px 0 10px 0;
     border-bottom: 1px dashed silver;
@@ -232,7 +233,7 @@ a:visited{
     font-family: "FontAwesome";
     content: "  \f040";
   }
-
+  /*ゲームのメインコンテンツ------*/
   .description{
     padding: 40px 20px;
     overflow: hidden;
@@ -255,7 +256,15 @@ a:visited{
     display: block;
     padding: 0;
   }
+  /*about usコンテンツ---------------*/
+  .aboutus-section h3{
+    font-size: 22px;
+    padding-left: 12px;
+    border-left: 4px solid skyblue;
+    margin: 20px 0 12px 0;
+  }
 
+  /*高専祭のメインコンテンツ---------*/
   /*サブコンテンツ----------------------*/
   .subcontents{
     width: 300px;/*162*/
