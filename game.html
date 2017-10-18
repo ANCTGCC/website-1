@@ -13,12 +13,28 @@
   
   <script type="text/javascript">
     $(function(){
-      $("#jQueryBox1").css("display","none");
-    // 「id="jQueryPush"」がクリックされた場合
-      $("#jQueryPush").click(function(){
-        // 「id="jQueryBox"」の表示、非表示を切り替える
-        $("#jQueryBox1").slideToggle("10");
-        $("#jQueryBox2").slideToggle("10");
+      $("#get_button").click(function(){
+        var set_value = $("#select_value").val();
+        if(set_value == 1){
+          $(".shooting").css("display","");
+          $(".action-game").css("display","");
+          $(".other").css("display","");
+        }
+        if(set_value == 2){
+          $(".action-game").css("display","none");
+          $(".other").css("display","none");
+          $(".shooting").css("display","");
+        }
+        else if(set_value == 3){
+          $(".shooting").css("display","none");
+          $(".other").css("display","none");
+          $(".action-game").css("display","");
+        }
+        else if(set_value == 4){
+          $(".shooting").css("display","none");
+          $(".action-game").css("display","none");
+          $(".other").css("display","");
+        }
       });
     });
   </script>
@@ -37,13 +53,7 @@
           <div class="menu3"></div>
         </div>
       </div>
-      <div id=jQueryBox1>
-        <li class="nav-home"><a href="./index.html"><i class="fa fa-home" aria-hidden="true"></i>  ホーム</a></li>
-        <li class="nav-game"><a href="./game.html"><i class="fa fa-gamepad" aria-hidden="true"></i>  作品の紹介・配布</a></li>
-        <li class="nav-aboutus"><a href="./aboutus.html"><i class="fa fa-user" aria-hidden="true"></i>  私たちについて</a></li>
-        <li class="nav-fes"><a href="./fes.html"><i class="fa fa-magic" aria-hidden="true"></i>  高専祭</a></li>
-      </div>
-      <div id=jQueryBox2>
+      <div id=jQueryBox>
         <li class="nav-home"><a href="./index.html"><i class="fa fa-home" aria-hidden="true"></i>  ホーム</a></li>
         <li class="nav-game"><a href="./game.html"><i class="fa fa-gamepad" aria-hidden="true"></i>  作品の紹介・配布</a></li>
         <li class="nav-aboutus"><a href="./aboutus.html"><i class="fa fa-user" aria-hidden="true"></i>  私たちについて</a></li>
@@ -63,8 +73,19 @@
   <div class="page">
     <div class="main">
       <div class="maincontents">
-        <div class="main-title"><h1>GAMES</h1></div>
-        <div class="description">
+        <div class="main-title">
+          <h1>Games</h1>
+          <p>
+            <select id="select_value">
+              <option value="1">すべて</option>
+              <option value="2">シューティング</option>
+              <option value="3">アクション</option>
+              <option value="4">パズル・その他</option>
+            </select>
+            <button id="get_button">OK</button>
+          </p>
+        </div>
+        <div class="description action-game">
           <img src="images/落書き世界タイトル.png" class="game-img">
           <div class="game-section">
             <h3>落書き世界の孔明な罠</h3>
@@ -72,11 +93,11 @@
             <ul>
               <li>製作者 : はぐめた、こいのぼり</li>
               <li>ジャンル : 即死系トラップアクション</li>
-              <li><i class="fa fa-file-o" aria-hidden="true"></i> : ダウンロードはこちら</li>
+              <li><i class="fa fa-file-o" aria-hidden="true"></i> : ダウンロードは<a href="https://onedrive.live.com/?authkey=%21AOGFUjYf-LjwC_4&id=9CBA5AA6C81C98D1%21380&cid=9CBA5AA6C81C98D1" target="_brank">こちら</a></li>
             </ul>
           </div>
         </div>  
-        <div class="description">
+        <div class="description shooting">
           <img src="images/AUS.png" class="game-img">
           <div class="game-section">
             <h3>AUS</h3>
@@ -84,11 +105,11 @@
             <ul>
               <li>製作者 : alpaca</li>
               <li>ジャンル : 周回系弾幕シューティング</li>
-              <li><i class="fa fa-file-o" aria-hidden="true"></i> : ダウンロードはこちら</li>
+              <li><i class="fa fa-file-o" aria-hidden="true"></i> : ダウンロードは<a href="https://onedrive.live.com/?authkey=%21AOGFUjYf-LjwC_4&id=9CBA5AA6C81C98D1%21380&cid=9CBA5AA6C81C98D1" target="_brank">こちら</a></li>
             </ul>
           </div>
         </div>
-        <div class="description">
+        <div class="description action-game">
           <img src="images/とある少年のデスロード.png" class="game-img">
           <div class="game-section">  
             <h3>とある少年の通学道路(デスロード)</h3>
@@ -96,11 +117,11 @@
             <ul>
               <li>製作者 : snow</li>
               <li>ジャンル : 無駄な操作をしまくる避けゲー</li>
-              <li><i class="fa fa-file-o" aria-hidden="true"></i> : ダウンロードはこちら</li>
+              <li><i class="fa fa-file-o" aria-hidden="true"></i> : ダウンロードは<a href="https://onedrive.live.com/?authkey=%21AOGFUjYf-LjwC_4&id=9CBA5AA6C81C98D1%21380&cid=9CBA5AA6C81C98D1" target="_brank">こちら</a></li>
             </ul>
           </div>
         </div>
-        <div class="description">
+        <div class="description action-game">
           <img src="images/VIRTUAL_LINK_WORLD_TITLE.png" class="game-img">
           <div class="game-section">  
             <h3>VIRTUAL LINK WORLD</h3>
@@ -108,11 +129,11 @@
             <ul>
               <li>製作者 : はぐめた</li>
               <li>ジャンル : 2Dスクロールアクション</li>
-              <li><i class="fa fa-file-o" aria-hidden="true"></i> : ダウンロードはこちら</li>
+              <li><i class="fa fa-file-o" aria-hidden="true"></i> : ダウンロードは<a href="https://onedrive.live.com/?authkey=%21AOGFUjYf-LjwC_4&id=9CBA5AA6C81C98D1%21380&cid=9CBA5AA6C81C98D1" target="_brank">こちら</a></li>
             </ul>
           </div>
         </div>
-        <div class="description">
+        <div class="description action-game">
           <img src="images/BallStar.png" class="game-img">
           <div class="game-section">  
             <h3>BallStar+</h3>
@@ -120,11 +141,11 @@
             <ul>
               <li>製作者 : はぐめた</li>
               <li>ジャンル : アクション</li>
-              <li><i class="fa fa-file-o" aria-hidden="true"></i> : ダウンロードはこちら</li>
+              <li><i class="fa fa-file-o" aria-hidden="true"></i> : ダウンロードは<a href="https://onedrive.live.com/?authkey=%21AOGFUjYf-LjwC_4&id=9CBA5AA6C81C98D1%21263&cid=9CBA5AA6C81C98D1" target="_brank">こちら</a></li>
             </ul>
           </div>
         </div>
-        <div class="description">
+        <div class="description other">
           <img src="images/MAZE.png" class="game-img">
           <div class="game-section">  
             <h3>MAZE</h3>
@@ -132,35 +153,35 @@
             <ul>
               <li>製作者 : Tatsuya</li>
               <li>ジャンル : 迷路</li>
-              <li><i class="fa fa-file-o" aria-hidden="true"></i> : ダウンロードはこちら</li>
+              <li><i class="fa fa-file-o" aria-hidden="true"></i> : ダウンロードは<a href="https://onedrive.live.com/?authkey=%21AOGFUjYf-LjwC_4&id=9CBA5AA6C81C98D1%21263&cid=9CBA5AA6C81C98D1" target="_brank">こちら</a></li>
             </ul>
           </div>
         </div>
-        <div class="description">
+        <div class="description action-game">
           <img src="images/boon.png" class="game-img">
           <div class="game-section">  
-            <h3>BOOON</h3>
+            <h3>BOON</h3>
             <p>ぶ～んとするゲームです。基本的にはスペースキーでジャンプ、ライトキーで移動。３０秒でどれだけ進めるかでスコアが決まります。ぶ～んの機嫌がいいとポップなジャンプ音が流れます。基本的にぶ～んは足腰が弱いので連続ジャンプは控えてあげてください。</p>
             <ul>
               <li>製作者 : snow</li>
               <li>ジャンル : は？</li>
-              <li><i class="fa fa-file-o" aria-hidden="true"></i> : ダウンロードはこちら</li>
+              <li><i class="fa fa-file-o" aria-hidden="true"></i> : ダウンロードは<a href="https://onedrive.live.com/?authkey=%21AOGFUjYf-LjwC_4&id=9CBA5AA6C81C98D1%21263&cid=9CBA5AA6C81C98D1" target="_brank">こちら</a></li>
             </ul>
           </div>
         </div>
-        <div class="description">
+        <div class="description other">
           <img src="images/lucy.png" class="game-img">
           <div class="game-section">
             <h3>Lucy</h3>
-            <p>開発の遅れが原因で、高専祭で展示することの叶わなかった謎のゲーム。Web 配布にて登場予定だが、その詳細は GCC 部員にさえ秘匿されている。続報を待て！</p>
+            <p>開発の遅れが原因で、高専祭で展示することの叶わなかった謎のゲーム。Web 配布にて登場予定だが、その詳細は GCC 部員にさえ秘匿とされている。続報を待て！</p>
             <ul>
               <li>製作者 : ???</li>
               <li>ジャンル : ???</li>
-              <li><i class="fa fa-file-o" aria-hidden="true"></i> : ダウンロードはこちら</li>
+              <!--<li><i class="fa fa-file-o" aria-hidden="true"></i> : ダウンロードは<a href="" target="_brank">こちら</a></li>-->
             </ul>
           </div>
         </div>
-        <div class="description">
+        <div class="description action-game">
           <img src="images/BallStar_ganso.png" class="game-img">
           <div class="game-section">
             <h3>BallStar</h3>
@@ -169,11 +190,11 @@
               <li>製作者 : はぐめた、Shuffreew</li>
               <li>ジャンル : アクション</li>
               <li>その他 ： CD配布版からアップデートを行いました（1.0.1 ： 2014/11/01）</li>
-              <li><i class="fa fa-file-o" aria-hidden="true"></i> : ダウンロードはこちら</li>
+              <li><i class="fa fa-file-o" aria-hidden="true"></i> : ダウンロードは<a href="https://onedrive.live.com/?authkey=%21AOGFUjYf-LjwC_4&id=9CBA5AA6C81C98D1%21257&cid=9CBA5AA6C81C98D1" target="_brank">こちら</a></li>
             </ul>
           </div>
         </div>
-        <div class="description">
+        <div class="description other">
           <img src="images/Firewall.png" class="game-img">
           <div class="game-section">
             <h3>FIREWALL</h3>
@@ -181,24 +202,24 @@
             <ul>
               <li>製作者 : YuZakuro</li>
               <li>ジャンル : Puzzle</li>
-              <li><i class="fa fa-file-o" aria-hidden="true"></i> : ダウンロードはこちら</li>
+              <li><i class="fa fa-file-o" aria-hidden="true"></i> : ダウンロードは<a href="https://onedrive.live.com/?authkey=%21AOGFUjYf-LjwC_4&id=9CBA5AA6C81C98D1%21257&cid=9CBA5AA6C81C98D1" target="_brank">こちら</a></li>
             </ul>
           </div>
         </div>
-        <div class="description">
+        <div class="description shooting">
           <img src="images/SakuraAS.png" class="game-img">
           <div class="game-section">
             <h3>さくらエスタシオン 朱き社の白狐</h3>
             <p>狐少女らが葉っぱや絵馬を敵に浴びせて倒すゲームです。</p>
             <ul>
-              <li>製作者 : もにょ</li>
-              <li>ジャンル : 和風テイストワイド画面縦スクロール型狐耳弾幕シューティング</li>
-              <li>その他　：　高専祭展示版からアップデートを行いました（ver. 1.04　：　2014/11/02）戦闘<a href="">BGM</a>が単体で公開されました。</li>
-              <li><i class="fa fa-file-o" aria-hidden="true"></i> : ダウンロードはこちら</li>
+              <li>製作者:もにょ</li>
+              <li>ジャンル:和風テイストワイド画面縦スクロール型狐耳弾幕シューティング</li>
+              <li>その他：高専祭展示版からアップデートを行いました（ver. 1.04：2014/11/02）戦闘<a href="https://soundcloud.com/reanisz/7lpnqnph16j9"　target="_blank">BGM</a>が単体で公開されました。</li>
+              <li><i class="fa fa-file-o" aria-hidden="true"></i> : ダウンロードは<a href="https://onedrive.live.com/?authkey=%21AOGFUjYf-LjwC_4&id=9CBA5AA6C81C98D1%21257&cid=9CBA5AA6C81C98D1" target="_brank">こちら</a></li>
             </ul>
           </div>
         </div>
-        <div class="description">
+        <div class="description other">
           <img src="images/SummationHex.png" class="game-img">
           <div class="game-section">
             <h3>SUMMATIONHEX</h3>
@@ -206,11 +227,11 @@
             <ul>
               <li>製作者 : Reanisz</li>
               <li>ジャンル : Puzzle</li>
-              <li><i class="fa fa-file-o" aria-hidden="true"></i> : ダウンロードはこちら</li>
+              <li><i class="fa fa-file-o" aria-hidden="true"></i> : ダウンロードは<a href="https://onedrive.live.com/?authkey=%21AOGFUjYf-LjwC_4&id=9CBA5AA6C81C98D1%21257&cid=9CBA5AA6C81C98D1" target="_brank">こちら</a></li>
             </ul>
           </div>
         </div>
-        <div class="description">
+        <div class="description other">
           <img src="images/Kikuhime.png" class="game-img">
           <div class="game-section">
             <h3>菊姫様の周遊流記</h3>
@@ -219,7 +240,7 @@
               <li>製作者 : 夜叉</li>
               <li>ジャンル : すごろく</li>
               <li>その他 ： CD配布版からアップデートを行いました（ver. 1.01 ： 2014/11/02）</li>
-              <li><i class="fa fa-file-o" aria-hidden="true"></i> : ダウンロードはこちら</li>
+              <li><i class="fa fa-file-o" aria-hidden="true"></i> : ダウンロードは<a href="https://onedrive.live.com/?authkey=%21AOGFUjYf-LjwC_4&id=9CBA5AA6C81C98D1%21257&cid=9CBA5AA6C81C98D1" target="_brank">こちら</a></li>
             </ul>
           </div>
         </div>
@@ -260,12 +281,10 @@
         <nav class="submenu">
           <ul>
             <li class="submenu-title">ホーム</li>
-            <li><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>ニュース</a></li>
+            <li><a href="./index.html"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>ニュース</a></li>
 
             <li class="submenu-title">作品紹介・配布</li>
-            <li><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>シューティング</a></li>
-            <li><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>アクション</a></li>
-            <li><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>パズル・その他</a></li>
+            <li><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>すべてのゲーム</a></li>
 
 
             <li class="submenu-title">私たちについて</li>

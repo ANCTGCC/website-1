@@ -1,0 +1,54 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+a{
+  text-decoration: none; 
+}
+a:hover{
+  text-decoration: underline;
+}
+h1{
+  margin: 0;
+}
+@media screen and (min-width: 1200px){
+  .page{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background: url(images/b001.gif);
+  }
+  .main{
+    margin: 0 auto;
+    padding: 0;
+    width: 1200px;
+    background: white;
+    box-shadow: 1px 1px 10px 1px rgba(0,0,0,0.5);
+  }
+  .main h1{
+    box-sizing: border-box;
+    display: block;
+    margin-left: 60px;
+    padding: 0;
+    width: 320px;
+  }
+  .subtitle{
+    display: block;
+    padding: 2px 0 30px 60px;
+  }
+  .gamegather{
+    margin: 0 auto;
+    padding: 20px;
+    display: block;
+    overflow: hidden;
+    width: 90%;
+  }
+  .game-samune{
+    float: left;
+    width: 200px;
+  }
+  .game-exp{
+    float: left;
+    padding-left: 20px;
+  }
+}

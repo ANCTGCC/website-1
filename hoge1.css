@@ -15,6 +15,7 @@ a{
   color: mediumblue;
   text-decoration: none;
   -webkit-tap-highlight-color: lightblue;
+  cursor: pointer;
 }
 a:visited{
   color: navy;
@@ -23,6 +24,9 @@ a:visited{
 
 
 @media screen and (min-width: 1200px){
+  #jQueryPush{
+    display: none;
+  }
   #gnav{
     width: 100%;
     margin: 0;
@@ -200,7 +204,7 @@ a:visited{
   .maincontents h1:after{right: 7px;}
 
   .maincontents h1:first-letter{
-    font-size: 45px;
+    font-size: 40px;
     color: red;
   }
   .maincontents h3{
@@ -256,11 +260,14 @@ a:visited{
     display: block;
     padding: 0;
   }
-  /*about usコンテンツ---------------*/
+  .game-section a:hover{
+    text-decoration: underline;
+  }
+  /*about usのメインコンテンツ---------------*/
   .aboutus-section h3{
     font-size: 22px;
-    padding-left: 12px;
     border-left: 4px solid skyblue;
+    padding-left: 12px;
     margin: 20px 0 12px 0;
   }
 
@@ -327,6 +334,13 @@ a:visited{
     background: lightblue;
     color: blue;
   }
+  #folder-menu ul{
+    margin: 0;
+    padding: 0;
+  }
+  #folder-menu li{
+    display: none;
+  }
 
   .page-top{
     margin: 0;
@@ -384,20 +398,15 @@ a:visited{
     padding: 0 5px;
     margin-top: 2.5px;
   }
-
-
-  #jQueryPush{
-    display: none;
-  }
-  #jQueryBox1{
-    display: none!important;
-  }
 }
 
 
 /*@media screen and (min-width: 768px) and (max-width: 1199px)*/
 @media screen and (max-width: 1199px){
   /*グローバルナビゲーション設定-----------------------*/
+  #jQueryBox{
+    display: none;
+  }
   #gnav{
     width: 100%;
     background: url(images/b001.gif);
@@ -454,9 +463,6 @@ a:visited{
   }
   #jQueryPush:hover{
     background: lightblue;
-  }
-  #jQueryBox2{
-    display: none!important;
   }
   .menu
   { 
@@ -693,6 +699,9 @@ a:visited{
 }
 @media screen and (max-device-width: 767px){
   /*グローバルナビゲーション設定-----------------------*/
+  #jQueryBox{
+    display: none;
+  }
   #gnav{
     width: 100%;
     /*background: papayawhip;*/
