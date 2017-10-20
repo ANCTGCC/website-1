@@ -9,12 +9,11 @@
   <script type="text/javascript" src="js/gcc.js"></script>
   <link rel="stylesheet" href="./hoge1.css">
   <link rel="stylesheet" href="css/font-awesome.min.css">
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.10/font-awesome-animation.css' type='text/css' media='all' />
-  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+  <!--<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">-->
 
   <script type="text/javascript">
     $(function(){
-      $("#get_button").click(function(){
+      $("#select_value").click(function(){
         var set_value = $("#select_value").val();
         if(set_value == 1){
           $(".shooting").css("display","");
@@ -57,8 +56,8 @@
       <div id=jQueryBox>
         <li class="nav-home"><a href="./index.html"><i class="fa fa-home" aria-hidden="true"></i>  ホーム</a></li>
         <li class="nav-game"><a href="./game.html"><i class="fa fa-gamepad" aria-hidden="true"></i>  作品の紹介・配布</a></li>
-        <li class="nav-aboutus"><a href="./aboutus.html"><i class="fa fa-user" aria-hidden="true"></i>  私たちについて</a></li>
         <li class="nav-fes"><a href="./fes.html"><i class="fa fa-magic" aria-hidden="true"></i>  高専祭</a></li>
+        <li class="nav-aboutus"><a href="./aboutus.html"><i class="fa fa-user" aria-hidden="true"></i>  私たちについて</a></li>
       </div>
     </ul>
   </nav>
@@ -83,10 +82,9 @@
               <option value="3">アクション</option>
               <option value="4">パズル・その他</option>
             </select>
-            <button id="get_button">OK</button>
           </p>
         </div>
-        <div class="description action-game">
+        <div class="description action-game" id="16rkw">
           <img src="images/落書き世界タイトル.png" class="game-img">
           <div class="game-section">
             <h3>落書き世界の孔明な罠</h3>
@@ -98,7 +96,7 @@
             </ul>
           </div>
         </div>  
-        <div class="description shooting">
+        <div class="description shooting" id="16aus">
           <img src="images/AUS.png" class="game-img">
           <div class="game-section">
             <h3>AUS</h3>
@@ -110,7 +108,7 @@
             </ul>
           </div>
         </div>
-        <div class="description action-game">
+        <div class="description action-game" id="16tst">
           <img src="images/とある少年のデスロード.png" class="game-img">
           <div class="game-section">  
             <h3>とある少年の通学道路(デスロード)</h3>
@@ -122,7 +120,7 @@
             </ul>
           </div>
         </div>
-        <div class="description action-game">
+        <div class="description action-game" id="16vlw">
           <img src="images/VIRTUAL_LINK_WORLD_TITLE.png" class="game-img">
           <div class="game-section">  
             <h3>VIRTUAL LINK WORLD</h3>
@@ -134,7 +132,7 @@
             </ul>
           </div>
         </div>
-        <div class="description action-game">
+        <div class="description action-game" id="15bsp">
           <img src="images/BallStar.png" class="game-img">
           <div class="game-section">  
             <h3>BallStar+</h3>
@@ -146,7 +144,7 @@
             </ul>
           </div>
         </div>
-        <div class="description other">
+        <div class="description other" id="15maz">
           <img src="images/MAZE.png" class="game-img">
           <div class="game-section">  
             <h3>MAZE</h3>
@@ -158,7 +156,7 @@
             </ul>
           </div>
         </div>
-        <div class="description action-game">
+        <div class="description action-game" id="15boo">
           <img src="images/boon.png" class="game-img">
           <div class="game-section">  
             <h3>BOON</h3>
@@ -170,7 +168,7 @@
             </ul>
           </div>
         </div>
-        <div class="description other">
+        <div class="description other" id="15luc">
           <img src="images/lucy.png" class="game-img">
           <div class="game-section">
             <h3>Lucy</h3>
@@ -182,7 +180,7 @@
             </ul>
           </div>
         </div>
-        <div class="description action-game">
+        <div class="description action-game" id="14bsg">
           <img src="images/BallStar_ganso.png" class="game-img">
           <div class="game-section">
             <h3>BallStar</h3>
@@ -195,7 +193,7 @@
             </ul>
           </div>
         </div>
-        <div class="description other">
+        <div class="description other" id="14fwl">
           <img src="images/Firewall.png" class="game-img">
           <div class="game-section">
             <h3>FIREWALL</h3>
@@ -207,7 +205,7 @@
             </ul>
           </div>
         </div>
-        <div class="description shooting">
+        <div class="description shooting" id="14sas">
           <img src="images/SakuraAS.png" class="game-img">
           <div class="game-section">
             <h3>さくらエスタシオン 朱き社の白狐</h3>
@@ -220,7 +218,7 @@
             </ul>
           </div>
         </div>
-        <div class="description other">
+        <div class="description other" id="14sth">
           <img src="images/SummationHex.png" class="game-img">
           <div class="game-section">
             <h3>SUMMATIONHEX</h3>
@@ -232,7 +230,7 @@
             </ul>
           </div>
         </div>
-        <div class="description other">
+        <div class="description other" id="14kkh">
           <img src="images/Kikuhime.png" class="game-img">
           <div class="game-section">
             <h3>菊姫様の周遊流記</h3>
@@ -287,33 +285,32 @@
             <li class="submenu-title">作品紹介・配布</li>
             <li id="folder-menu"><a><i class="fa fa-chevron-circle-down" aria-hidden="true"></i>すべてのゲーム</a>
               <ul>
-                <li><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>落書き世界の孔明な罠</a></li>
-                <li><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>AUS</a></li>
-                <li><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>とある少年の通学道路(デスロード)</a></li>
-                <li><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>VIRTUAL LINK WORLD</a></li>
-                <li><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>BallStar+</a></li>
-                <li><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>MAZE</a></li>
-                <li><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>BOON</a></li>
-                <li><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>Lucy</a></li>
-                <li><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>BallStar</a></li>
-                <li><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>FIREWALL</a></li>
-                <li><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>さくらエスタシオン 朱き社の白狐</a></li>
-                <li><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>SUMMATIONHEX</a></li>
-                <li><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>菊姫様の周遊流記</a></li>
+                <li><a href="./game.html#16rkw"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>落書き世界の孔明な罠</a></li>
+                <li><a href="./game.html#16aus"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>AUS</a></li>
+                <li><a href="./game.html#16tst"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>とある少年の通学道路(デスロード)</a></li>
+                <li><a href="./game.html#16vlw"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>VIRTUAL LINK WORLD</a></li>
+                <li><a href="./game.html#15bsp"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>BallStar+</a></li>
+                <li><a href="./game.html#15maz"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>MAZE</a></li>
+                <li><a href="./game.html#15boo"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>BOON</a></li>
+                <li><a href="./game.html#15luc"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>Lucy</a></li>
+                <li><a href="./game.html#14bsg"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>BallStar</a></li>
+                <li><a href="./game.html#14fwl"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>FIREWALL</a></li>
+                <li><a href="./game.html#14sas"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>さくらエスタシオン 朱き社の白狐</a></li>
+                <li><a href="./game.html#14sth"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>SUMMATIONHEX</a></li>
+                <li><a href="./game.html#14kkh"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>菊姫様の周遊流記</a></li>
               </ul>
             </li>
 
+            <li class="submenu-title">高専祭</li>
+            <li><a href="./fes.html#fes2017"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>2017年度高専祭</a></li>
+            <li><a href="./fes.html#fes2016"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>2016年度高専祭</a></li>
+            <li><a href="./fes.html#fes2015"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>2015年度高専祭</a></li>
+            <li><a href="./fes.html#fes2014"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>2014年度高専祭</a></li>
+            <li><a href="./fes.html#fes2013"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>2013年度高専祭</a></li>
 
             <li class="submenu-title">私たちについて</li>
-            <li><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>主活動</a></li>
-            <li><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>活動場所</a></li>
-
-            <li class="submenu-title">高専祭</li>
-            <li><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>2017年度高専祭</a></li>
-            <li><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>2016年度高専祭</a></li>
-            <li><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>2015年度高専祭</a></li>
-            <li><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>2014年度高専祭</a></li>
-            <li><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>2013年度高専祭</a></li>
+            <li><a href="./aboutus.html#aboutGCC"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>GCCについて</a></li>
+            <li><a href="./aboutus.html#aboutActivity"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>活動について</a></li>
           </ul>
         </nav>
  

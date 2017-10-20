@@ -4,7 +4,7 @@
 }
 body{
   margin: 0;
-  background: url(images/b001.png);
+  background: url(images/b001.gif);
   font-family: "Century Gothic";
   font-family: "SAO UI";
 }
@@ -20,8 +20,6 @@ a{
 a:visited{
   color: navy;
 }
-
-
 
 @media screen and (min-width: 1200px){
   #jQueryPush{
@@ -264,14 +262,76 @@ a:visited{
     text-decoration: underline;
   }
   /*about usのメインコンテンツ---------------*/
-  .aboutus-section h3{
+  .aboutus-section h3,.fes-section h3{
     font-size: 22px;
     border-left: 4px solid skyblue;
     padding-left: 12px;
     margin: 20px 0 12px 0;
   }
-
   /*高専祭のメインコンテンツ---------*/
+  .fes-h{
+    width: 100%;
+    text-align: center;  
+  }
+  .fes-h h3{
+    margin: 0 auto;
+    padding-top: 15px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .fes-h h3:before{
+    content: "↓　　　　　　　　　　";
+    font-weight: 600;
+  }
+  .fes-h h3:after{
+    content: "　　　　　　　　　　↓";
+    font-weight: 600;
+  }
+  .fes-section dl{
+    padding-left: 15px;
+  }
+  .fes-section dt{
+    font-weight: 600;
+  }
+  .fes-section dd{
+    padding-bottom: 20px;
+    margin-left: 20px;
+  }
+  dd.none{
+    padding-bottom: 0px;
+  }
+  dd.chuui{
+    font-size: 14px;
+  }
+  .shoukai{
+    display: inline-block;
+    position: relative;
+  }
+  .shoukai img{
+    width: 200px;
+    height: 120px;
+    transition: linear 0.3s;
+  }
+  .shoukai:hover img{
+    background: white;
+    opacity: 0.1;     
+  }
+  .shoukai span{
+    position: absolute;
+    left: 0; top: 40%; right: 0;
+    display: block;
+    margin: auto;
+    width: 80%;
+    color: black;
+    opacity: 0;
+    text-align: center;
+    transition: linear 0.3s;
+  }
+  .shoukai:hover span{
+    opacity: 1;
+    font-size: 15px;
+  }
+
   /*サブコンテンツ----------------------*/
   .subcontents{
     width: 300px;/*162*/
@@ -348,7 +408,7 @@ a:visited{
   }
    /* animation: kaiten 0.5s linear 0s 1 normal;*/
   .fa-chevron-circle-down{
-    transition: 0.3s linear;
+    transition: 0.33s linear;
   }
   .kaiten{
     transform: rotate(180deg);

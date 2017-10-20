@@ -9,8 +9,7 @@
   <script type="text/javascript" src="js/gcc.js"></script>
   <link rel="stylesheet" href="./hoge1.css">
   <link rel="stylesheet" href="css/font-awesome.min.css">
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.10/font-awesome-animation.css' type='text/css' media='all' />
-  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+  <!--<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">-->
 </head>
 
 <body>
@@ -29,8 +28,8 @@
       <div id=jQueryBox>
         <li class="nav-home"><a href="./index.html"><i class="fa fa-home" aria-hidden="true"></i>  ホーム</a></li>
         <li class="nav-game"><a href="./game.html"><i class="fa fa-gamepad" aria-hidden="true"></i>  作品の紹介・配布</a></li>
-        <li class="nav-aboutus"><a href="./aboutus.html"><i class="fa fa-user" aria-hidden="true"></i>  私たちについて</a></li>
         <li class="nav-fes"><a href="./fes.html"><i class="fa fa-magic" aria-hidden="true"></i>  高専祭</a></li>
+        <li class="nav-aboutus"><a href="./aboutus.html"><i class="fa fa-user" aria-hidden="true"></i>  私たちについて</a></li>
       </div>
     </ul>
   </nav>
@@ -38,7 +37,7 @@
   <!--タイトルバー-->
   <div class="title-bar">
     <div class="title-bar-contents">
-      <h1><i class="fa fa-rocket" aria-hidden="true"></i> Welcome to the GCC</h1><p>このページでは私たち GCC について哨戒しています。</p>
+      <h1><i class="fa fa-rocket" aria-hidden="true"></i> Welcome to the GCC</h1><p>このページでは私たち GCC について紹介しています。</p>
     </div>
     <div class="title-bar-space">　</div>
   </div>
@@ -47,25 +46,18 @@
     <div class="main">
       <div class="maincontents">
         <div class="main-title"><h1>About us</h1></div>
-        <div class="aboutus-section">
+        <div class="aboutus-section" id="aboutGCC">
           <h3>GCCについて</h3>
           <p>GCCとは、ゲーム創作研究部( Game Creator's Club )の略称で、文字通りゲームを作るための部活です。学内では GCC で通っています。</p>
         </div>
-        <div class="aboutus-section">
+        <div class="aboutus-section" id="aboutActivity">
           <h3>活動について</h3>
           <p>PC で動くゲームを製作することがメインの活動です。また、部員は、いつでも自由にゲームを製作することができます。また、今年の部活動は、毎週水・木16:20~18:00です。</p>
         </div>
-        <div class="aboutus-section">
-          <h3>ゲームを作るには？</h3>
-          <p>PCやスマホでプレイするゲームを作るには、プログラミングの知識が必須です。では、プログラミング</p>
-        </div>
-        <div class="aboutus-section">
-          <h3>ゲームを作るには？</h3>
-          <p>PCやスマホでプレイするゲームを作るには、プログラミングの知識が必須です。では、プログラミング</p>
-        </div>
-        <div class="aboutus-section" id="kuso">
-          <h3>ゲームを作るには？</h3>
-          <p>PCやスマホでプレイするゲームを作るには、プログラミングの知識が必須です。では、プログラミング</p>
+        <!--PCやスマホでプレイするゲームを作るには、プログラミングの知識が必須です。部員は、基本独学でプログラミングを学び、使えるようにしていきます。-->
+        
+        <div>
+          
         </div>
       </div>
 
@@ -82,35 +74,38 @@
             <li class="submenu-title">作品紹介・配布</li>
             <li id="folder-menu"><a><i class="fa fa-chevron-circle-down" aria-hidden="true"></i>すべてのゲーム</a>
               <ul>
-                <li><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>落書き世界の孔明な罠</a></li>
-                <li><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>AUS</a></li>
-                <li><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>とある少年の通学道路(デスロード)</a></li>
-                <li><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>VIRTUAL LINK WORLD</a></li>
-                <li><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>BallStar+</a></li>
-                <li><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>MAZE</a></li>
-                <li><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>BOON</a></li>
-                <li><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>Lucy</a></li>
-                <li><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>BallStar</a></li>
-                <li><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>FIREWALL</a></li>
-                <li><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>さくらエスタシオン 朱き社の白狐</a></li>
-                <li><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>SUMMATIONHEX</a></li>
-                <li><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>菊姫様の周遊流記</a></li>
+                <li><a href="./game.html#16rkw"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>落書き世界の孔明な罠</a></li>
+                <li><a href="./game.html#16aus"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>AUS</a></li>
+                <li><a href="./game.html#16tst"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>とある少年の通学道路(デスロード)</a></li>
+                <li><a href="./game.html#16vlw"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>VIRTUAL LINK WORLD</a></li>
+                <li><a href="./game.html#15bsp"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>BallStar+</a></li>
+                <li><a href="./game.html#15maz"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>MAZE</a></li>
+                <li><a href="./game.html#15boo"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>BOON</a></li>
+                <li><a href="./game.html#15luc"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>Lucy</a></li>
+                <li><a href="./game.html#14bsg"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>BallStar</a></li>
+                <li><a href="./game.html#14fwl"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>FIREWALL</a></li>
+                <li><a href="./game.html#14sas"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>さくらエスタシオン 朱き社の白狐</a></li>
+                <li><a href="./game.html#14sth"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>SUMMATIONHEX</a></li>
+                <li><a href="./game.html#14kkh"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>菊姫様の周遊流記</a></li>
               </ul>
             </li>
 
 
-            <li class="submenu-title">私たちについて</li>
-            <li><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>主活動</a></li>
-            <li><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>活動場所</a></li>
-
             <li class="submenu-title">高専祭</li>
-            <li><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>2017年度高専祭</a></li>
-            <li><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>2016年度高専祭</a></li>
-            <li><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>2015年度高専祭</a></li>
-            <li><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>2014年度高専祭</a></li>
-            <li><a href=""><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>2013年度高専祭</a></li>
+            <li><a href="./fes.html#fes2017"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>2017年度高専祭</a></li>
+            <li><a href="./fes.html#fes2016"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>2016年度高専祭</a></li>
+            <li><a href="./fes.html#fes2015"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>2015年度高専祭</a></li>
+            <li><a href="./fes.html#fes2014"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>2014年度高専祭</a></li>
+            <li><a href="./fes.html#fes2013"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>2013年度高専祭</a></li>
+
+            <li class="submenu-title">私たちについて</li>
+            <li><a href="./aboutus.html#aboutGCC"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>GCCについて</a></li>
+            <li><a href="./aboutus.html#aboutActivity"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>活動について</a></li>
           </ul>
         </nav>
+        <div id="page-top" class="page-top">
+          <p><a id="move-page-top" class="move-page-top"><i class="fa fa-chevron-circle-up" aria-hidden="true"></i> TOPへ</a></p>
+        </div>
       </div>
     </div>
   </div>
