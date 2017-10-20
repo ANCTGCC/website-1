@@ -337,11 +337,22 @@ a:visited{
   #folder-menu ul{
     margin: 0;
     padding: 0;
+    border-left: none;
+    border-right: none;
   }
   #folder-menu li{
     display: none;
   }
-
+  #folder-menu a{
+    padding-left: 0;
+  }
+   /* animation: kaiten 0.5s linear 0s 1 normal;*/
+  .fa-chevron-circle-down{
+    transition: 0.3s linear;
+  }
+  .kaiten{
+    transform: rotate(180deg);
+  }
   .page-top{
     margin: 0;
     padding: 0;

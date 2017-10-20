@@ -1,8 +1,11 @@
+//ハンバーガーメニューを押すとメニューがスライド
 $(function(){
   $("#jQueryPush").click(function(){
     $("#jQueryBox").slideToggle("10");
   });
 });
+
+//TOPへ戻るのボタン
 // グローバル変数
 var syncerTimeout = null;
 // 一連の処理
@@ -47,8 +50,10 @@ $(function(){
   });
 });
 
+//折り畳みメニューの式
 $(function(){
   $("#folder-menu").click(function(){
     $("#folder-menu li").slideToggle("10");
+    $(".fa-chevron-circle-down").toggleClass("kaiten");
   });
 });
