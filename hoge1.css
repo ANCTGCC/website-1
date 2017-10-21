@@ -208,6 +208,7 @@ a:visited{
   .maincontents h3{
     margin: 0;
     padding: 0;
+    padding-bottom: 3px;
     font-size: 18px;
   }
   .maincontents p{
@@ -261,13 +262,6 @@ a:visited{
   .game-section a:hover{
     text-decoration: underline;
   }
-  /*about usのメインコンテンツ---------------*/
-  .aboutus-section h3,.fes-section h3{
-    font-size: 22px;
-    border-left: 4px solid skyblue;
-    padding-left: 12px;
-    margin: 20px 0 12px 0;
-  }
   /*高専祭のメインコンテンツ---------*/
   .fes-h{
     width: 100%;
@@ -286,6 +280,9 @@ a:visited{
   .fes-h h3:after{
     content: "　　　　　　　　　　↓";
     font-weight: 600;
+  }
+  .fes-section{
+    padding-top: 20px;
   }
   .fes-section dl{
     padding-left: 15px;
@@ -330,6 +327,13 @@ a:visited{
   .shoukai:hover span{
     opacity: 1;
     font-size: 15px;
+  }
+  /*about usのメインコンテンツ---------------*/
+  .aboutus-section h3,.fes-section h3{
+    font-size: 22px;
+    border-left: 4px solid skyblue;
+    padding-left: 12px;
+    margin: 20px 0 12px 0;
   }
 
   /*サブコンテンツ----------------------*/
@@ -484,7 +488,7 @@ a:visited{
     box-shadow: 0px 3px 10px 5px rgba(0,0,0,0.5);
   }
   .navbar{
-    background: white;
+    background: url(images/b001.gif);
     overflow: hidden;
     width: 728px;
     margin: 0 auto;
@@ -510,7 +514,6 @@ a:visited{
   }
   .navbar li:not(.title){
     margin: 0;
-    background: white;
     width: 680px;
   }
   .navbar li:not(.title) a{
@@ -531,6 +534,7 @@ a:visited{
     cursor: pointer;
     position: absolute;
     top: 24px; left: 680px;
+    background: white;
   }
   #jQueryPush:hover{
     background: lightblue;
@@ -589,10 +593,8 @@ a:visited{
     width: 768px;
   }
   /*メインコンテンツ設定----------------------------*/
-
   .page{
     width: 100%;
-    /*background: papayawhip;*/
     background: url(images/b001.gif);
   }
   .main{
@@ -606,45 +608,53 @@ a:visited{
     width: 544px;
     float: left;
     background: white;
-    padding: 20px;
+    padding: 20px;/*20*/
     margin-right: 20px;
     border: 1px solid silver;
   }
-  .maincontents h1{
-    text-align: center;
-    font-size: 35px;
-    font-family: "Century Gothic";
-    font-family: "SAO UI";
-    font-weight: 300;
-    margin: 0;
-    position: relative;
+  .main-title{
+    width: 100%;
   }
-  .maincontents h1:first-letter{
-    font-size: 45px;
-    color: red;
+  .maincontents h1{ 
+    font-size: 30px;
+    font-family: "SAO UI";
+    font-weight: 400;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    position: relative;
+    display: block; 
+    width: 200px;
+    padding: 0 10px;
+    border-top: solid 2px black;
+    border-bottom: solid 2px black;
   }
   .maincontents h1:before,.maincontents h1:after{
     content: "";
     position: absolute;
-    top: 50%;
-    display: inline-block;
-    width: 40px;
-    height: 3px;
-    border-top: solid 1px black;
-    border-bottom: solid 1px black;
+    top: -7px;
+    width: 2px;
+    height: calc(100% + 14px);
+    background-color: black;
   }
-  .maincontents h1:before {left: 32%;}
-  .maincontents h1:after {right: 32%;}
+  .maincontents h1:before{left: 7px;}
+  .maincontents h1:after{right: 7px;}
 
+  .maincontents h1:first-letter{
+    font-size: 35px;
+    color: red;
+  }
   .maincontents h3{
     margin: 0;
     padding: 0;
+    padding-bottom: 3px;
     font-size: 16px;
   }
   .maincontents p{
     margin: 0;
-    font-size: 14px;
+    font-size: 15px;
   }
+  /*ホームのメインコンテンツ--------------------------*/
   .section{
     padding: 20px 0 10px 0;
     border-bottom: 1px dashed silver;
@@ -653,17 +663,25 @@ a:visited{
     border-bottom: none;
     padding-bottom: 0;
   }
+  .section a:hover{
+    color: navy;
+    text-decoration: underline;
+  }
   p.toukou{
-    font-size: 12px;
+    font-size: 13px;
     padding-top: 3px;
   }
+  p.toukou:before{
+    font-family: "FontAwesome";
+    content: "  \f040";
+  }
+  /*ゲームのメインコンテンツ--------------------*/
+
+  /*サブコンテンツ---------------------------*/
   .subcontents{
     width: 162px;
     float: left;
     padding: 0;
-    /*background: lightblue;
-    box-shadow: 0px 5px 10px 2px rgba(0,0,0,0.3);
-    */
   }
   .about{
     border: 1px solid silver;
@@ -671,17 +689,23 @@ a:visited{
   }
   .about h5{
     text-align: center;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 300;
     padding: 2px 0;
     margin: 0;
     background: skyblue;
     border-bottom: 1px dashed black;
   }
+  .about h5:before{
+    content: "/　　　　　";
+  }
+  .about h5:after{
+    content: "　　　　　/";
+  }
   .about p{
     display: block;
     margin: 0;
-    padding: 2px 7px;
+    padding: 2px 6px;
     font-size: 14px;
   }
   .submenu ul{
@@ -692,7 +716,7 @@ a:visited{
     background: white;
   }
   .submenu-title{
-    font-size: 15px;
+    font-size: 14px;
     padding: 5px 0 5px 15px;
     background: skyblue;
     color: white;
@@ -715,6 +739,53 @@ a:visited{
     background: lightblue;
     color: blue;
   }
+  #folder-menu ul{
+    margin: 0;
+    padding: 0;
+    border-left: none;
+    border-right: none;
+  }
+  #folder-menu li{
+    display: none;
+  }
+  #folder-menu a{
+    padding-left: 0;
+  }
+  .fa-chevron-circle-down{
+    transition: 0.33s linear;
+  }
+  .kaiten{
+    transform: rotate(180deg);
+  }
+  .page-top{
+    margin: 0;
+    padding: 0;
+    display: none;
+  }
+  .page-top p{
+    margin: 0 auto;
+    padding: 0;
+    position: fixed;
+    bottom: 5%;
+  }
+  .move-page-top{
+    display: block;
+    background: #D36015;
+    width: 80px;
+    height: 50px;
+
+    color: #fff;
+    line-height: 50px;
+    text-decoration: none;
+    text-align: center;
+
+    transition:all 1s;
+  }
+  .move-page-top:hover{
+    opacity: 0.85;
+    cursor: pointer;
+  }
+
   /*フッター設定-------------------------*/
 
   .footer-container{
