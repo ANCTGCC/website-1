@@ -4,7 +4,10 @@
 }
 body{
   margin: 0;
-  background: url(images/b001.gif);
+  background: url(images/b001.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
   font-family: "Century Gothic";
   font-family: "SAO UI";
 }
@@ -28,10 +31,10 @@ a:visited{
   #gnav{
     width: 100%;
     margin: 0;
-    background: url(images/b001.gif);
+    /*background: url(images/ghost.png);*/
+    background: white;
   }
   #gnav ul{
-    background: url(images/b001.gif);
     width: 1160px;
     margin: 0 auto;
     position: relative;
@@ -106,16 +109,17 @@ a:visited{
   /*タイトルバー-----------------------*/
   .title-bar{
     width: 100%;
-    background: url(images/b001.gif);
+    background: skyblue;
+    box-shadow: 0px 10px 10px -10px rgba(0,0,0,0.8) inset;
   }
   .title-bar-contents{
     margin: 0 auto;
     width: 1200px;
-    background: url(images/2.png);
   }
   .title-bar-contents h1{
     display: block;
     padding: 0;
+    padding-top: 10px;
     padding-bottom: 5px;
     margin: 0;
     padding-left: 45px;
@@ -129,9 +133,10 @@ a:visited{
     padding: 0;
     padding-left: 45px;
     margin: 0;
+    padding-bottom: 10px;
   }
   .title-bar-space{
-    width: 1200px;
+    background: url(images/b001.gif);
   }
 
   @keyframes rocket{
@@ -155,13 +160,11 @@ a:visited{
   /*メインコンテンツ--------------------*/
   .page{
     width: 100%;
-    /*background: papayawhip;*/
     background: url(images/b001.gif);
   }
   .main{
     width: 1200px;/*768*/
     margin: 0 auto;
-    background: url(images/b001.gif);
     overflow: hidden;
     padding: 0;
   }
@@ -349,7 +352,7 @@ a:visited{
     padding: 0;
   }
   .about{
-    border: 1px solid silver;
+    border: 1px solid skyblue;
     background: white;
   }
   .about h5{
@@ -454,15 +457,19 @@ a:visited{
 
   /*フッター設定------------------------*/
 
+  .footer-bar-space{
+    background: url(images/b001.gif);
+  }
   .footer-container{
     padding: 0px;
     width: 100%;
-    /*background: papayawhip;*/
-    background: url(images/b001.gif);
+    background: skyblue;
+    box-shadow: 0px 10px 10px -10px rgba(0,0,0,0.8) inset;
   }
   .info{
-    background: yellowgreen;
     color: white;
+    text-shadow: 1px 1px 2px black;
+    font-weight: 600;
     width: 1200px;/*768*/
     margin: 0 auto;
     padding: 0;
@@ -471,13 +478,7 @@ a:visited{
   }
   .copyright{
     display: block;
-    float: left;
-    padding: 0 5px;
-  }
-  .info address{
-    float: right;
-    padding: 0 5px;
-    margin-top: 2.5px;
+    text-align: center;
   }
 }
 
@@ -491,11 +492,10 @@ a:visited{
   }
   #gnav{
     width: 100%;
-    background: url(images/b001.gif);
-    box-shadow: 0px 3px 10px 5px rgba(0,0,0,0.5);
+    background: white;
+    box-shadow: 0px 10px 10px -10px rgba(0,0,0,0.5);
   }
   .navbar{
-    background: url(images/b001.gif);
     overflow: hidden;
     width: 728px;
     margin: 0 auto;
@@ -584,18 +584,20 @@ a:visited{
     background: lightblue;
     cursor: pointer;
   }
+  /*タイトルバー設定---------------------------*/
   .title-bar{
     width: 100%;
-    background: url(images/b001.gif);
+    background: skyblue;
+    box-shadow: 0px 10px 10px -10px rgba(0,0,0,0.8) inset;
   }
   .title-bar-contents{
     margin: 0 auto;
     width: 768px;
-    background: url(images/2.png);
   }
   .title-bar-contents h1{
     display: block;
     padding: 0;
+    padding-top: 10px;
     padding-bottom: 5px;
     margin: 0;
     padding-left: 30px;
@@ -605,10 +607,11 @@ a:visited{
     display: block;
     padding: 0;
     padding-left: 30px;
+    padding-bottom: 10px;
     margin: 0;
   }
   .title-bar-space{
-    width: 768px;
+    background: url(images/b001.gif);
   }
   .fa-rocket:hover{
     animation: rocket 2s ease .5s infinite;
@@ -931,41 +934,17 @@ a:visited{
     cursor: pointer;
   }
 
-  /*フッター設定-------------------------*/
-
+  /*フッター設定--------------------------------*/
+  .footer-bar-space{
+    background: url(images/b001.gif);
+  }
   .footer-container{
     padding: 0px;
     width: 100%;
-    /*background: papayawhip;*/
-    background: url(images/b001.gif);
+    background: skyblue;
+    box-shadow: 0px 10px 10px -10px rgba(0,0,0,0.8) inset;
   }
-  /*
-  .footer-container a{
-    font-size: 14px;
-  }
-  .footer-nav{
-    display: flex;
-    justify-content: space-around;
-    color: white;
-    width: 768px;
-    margin: 0 auto;
-    background: green;
-    border-top: 1px solid black;
-  }
-  .footer-nav li,.info li{
-    margin: 0;
-    padding: 0;
-  }
-  .footer-nav a{
-    color: white;
-    opacity: 0.6;
-  }
-  .footer-nav a:hover{
-    background: gray;
-  }
-  */
   .info{
-    background: yellowgreen;
     color: white;
     width: 768px;
     margin: 0 auto;
@@ -975,13 +954,9 @@ a:visited{
   }
   .copyright{
     display: block;
-    float: left;
     padding: 0 5px;
-  }
-  .info address{
-    float: right;
-    padding: 0 5px;
-    margin-top: 2.5px;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
   }
 }
 @media screen and (max-device-width: 767px){
