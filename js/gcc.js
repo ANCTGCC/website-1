@@ -57,3 +57,13 @@ $(function(){
     $(".fa-chevron-circle-down").toggleClass("kaiten");
   });
 });
+
+//メニューのアニメーション
+$(function(){
+  $("#jQueryPush").one("click",function(){
+    $(".navbar i").css("animation-name","rolling");
+    setTimeout(function(){
+      $(".navbar i").css("animation-name","");
+    },3000);
+  });
+});

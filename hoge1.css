@@ -505,6 +505,7 @@ a:visited{
   .logo{
     vertical-align: middle;
     margin: 0;
+    transition: linear 0.5s;
   }
   .logo:hover{
     opacity: 0.6;
@@ -522,6 +523,17 @@ a:visited{
   .navbar li:not(.title){
     margin: 0;
     width: 680px;
+  }
+  .navbar i{
+    animation: 3s linear 0s 1;
+  }
+  @keyframes rolling{
+    0%{
+       transform: translate(-360px,0) rotate(0deg); 
+    }
+    100%{
+      transform: translate(0,0) rotate(1440deg);
+    }
   }
   .navbar li:not(.title) a{
     display: block;
@@ -572,7 +584,6 @@ a:visited{
     background: lightblue;
     cursor: pointer;
   }
-
   .title-bar{
     width: 100%;
     background: url(images/b001.gif);
@@ -598,6 +609,26 @@ a:visited{
   }
   .title-bar-space{
     width: 768px;
+  }
+  .fa-rocket:hover{
+    animation: rocket 2s ease .5s infinite;
+  }
+  @keyframes rocket{
+    0%{
+      transform: translate(0);
+    }
+    40%{
+      transform: translate(150px,-150px);
+    }
+    50%{
+      transform: translate(-800px,-150px);
+    }
+    60%{
+      transform: translate(-800px,800px);
+    }
+    100%{
+      transform: translate(0,0);
+    }
   }
   /*メインコンテンツ設定----------------------------*/
   .page{
@@ -845,7 +876,7 @@ a:visited{
   }
   .submenu a{
     display: block;
-    padding: 2px 0;
+    padding: 4px 0;
     font-size: 14px;
     color: black;
   }
