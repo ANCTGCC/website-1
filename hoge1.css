@@ -125,9 +125,6 @@ a:visited{
     padding-left: 45px;
     font-family: "SAO UI";
   }
-  .fa-rocket:hover{
-    animation: rocket 2s ease .5s infinite;
-  }
   .title-bar-contents p{
     display: block;
     padding: 0;
@@ -138,7 +135,22 @@ a:visited{
   .title-bar-space{
     background: url(images/b001.gif);
   }
-
+  .fa-rocket{
+    transform: rotate(0deg);
+  }
+  .fa-rocket:hover{
+    animation: rocket 2s ease .5s infinite;
+    transform-origin: -800% -800%;
+  }
+  @keyframes rocket{
+    0%{
+      transform: rotate(0deg) translate(0px,0px);
+    }
+    100%{
+      transform: rotate(-360deg) translate(0px,0px);
+    }
+  }
+  /*
   @keyframes rocket{
     0%{
       transform: translate(0);
@@ -147,7 +159,7 @@ a:visited{
       transform: translate(150px,-150px);
     }
     50%{
-      transform: translate(-200px,-150px);
+      transform: translate(-800px,-150px);
     }
     60%{
       transform: translate(-150px,160px);
@@ -156,6 +168,7 @@ a:visited{
       transform: translate(0,0);
     }
   }
+  */
 
   /*メインコンテンツ--------------------*/
   .page{
@@ -523,17 +536,7 @@ a:visited{
   .navbar li:not(.title){
     margin: 0;
     width: 680px;
-  }
-  .navbar i{
-    animation: 3s linear 0s 1;
-  }
-  @keyframes rolling{
-    0%{
-       transform: translate(-360px,0) rotate(0deg); 
-    }
-    100%{
-      transform: translate(0,0) rotate(1440deg);
-    }
+    opacity: 0;
   }
   .navbar li:not(.title) a{
     display: block;
@@ -618,6 +621,15 @@ a:visited{
   }
   @keyframes rocket{
     0%{
+      transform: rotate(0deg);
+    }
+    100%{
+      transform: rotate(360deg);
+    }
+  }
+  /*
+  @keyframes rocket{
+    0%{
       transform: translate(0);
     }
     40%{
@@ -633,6 +645,7 @@ a:visited{
       transform: translate(0,0);
     }
   }
+  */
   /*メインコンテンツ設定----------------------------*/
   .page{
     width: 100%;
@@ -879,7 +892,7 @@ a:visited{
   }
   .submenu a{
     display: block;
-    padding: 4px 0;
+    padding: 6px 0;
     font-size: 14px;
     color: black;
   }
@@ -959,6 +972,7 @@ a:visited{
     text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
   }
 }
+
 @media screen and (max-device-width: 767px){
   /*グローバルナビゲーション設定-----------------------*/
   #jQueryBox{
@@ -966,22 +980,24 @@ a:visited{
   }
   #gnav{
     width: 100%;
-    /*background: papayawhip;*/
-    background: url(images/b001.gif);
-    box-shadow: 0px 3px 10px 5px rgba(0,0,0,0.5);
+    background: white;
+    box-shadow: 0px 10px 10px -10px rgba(0,0,0,0.5);
   }
   .navbar{
-    background: white;
     overflow: hidden;
-    width: 280px;/*728*/
+    width: 480px;
     margin: 0 auto;
     position: relative;
     top: 0; left: 0;
   }
   .logo{
+    display: none;
+  }
+  .logo2{
     vertical-align: middle;
     margin: 0;
-    display: none;
+    transition: linear 0.5s;
+    visibility: visible;
   }
   .navbar li{
     width: 100%;
@@ -989,23 +1005,22 @@ a:visited{
   .navbar li.title{
     padding: 12px 0;
     width: 404px;
-  
   }
   .navbar li:not(.title){
     margin: 0;
-    background: white;
-    width: 240px;/*680*/
+    width: 300px;
+    opacity: 0;
   }
   .navbar li:not(.title) a{
     display: block;
     text-align: center;
-    padding: 5px 0;
-    font-size: 14px;
+    padding: 10px 0;
+    font-size: 16px;
     color: black;
   }
   .navbar li:not(.title) a:hover{
-    background: none;
     opacity: 0.4;
+    background: none;
   }
   .navbar li.title a:hover{
     opacity: 0.8;
@@ -1013,13 +1028,11 @@ a:visited{
   #gnav ul #jQueryPush{
     cursor: pointer;
     position: absolute;
-    top: 24px; left: 250px;/*680*/
+    top: 24px; left: 680px;
+    background: white;
   }
   #jQueryPush:hover{
     background: lightblue;
-  }
-  #jQueryBox2{
-    display: none!important;
   }
   .menu
   { 
@@ -1047,87 +1060,262 @@ a:visited{
     background: lightblue;
     cursor: pointer;
   }
-
+  /*タイトルバー設定---------------------------*/
   .title-bar{
     width: 100%;
-    /*background: papayawhip;*/
-    background: url(images/b001.gif);
+    background: skyblue;
+    box-shadow: 0px 10px 10px -10px rgba(0,0,0,0.8) inset;
   }
   .title-bar-contents{
     margin: 0 auto;
-    width: 320px;/*768*/
-    background: url(images/2.png);
+    width: 768px;
   }
   .title-bar-contents h1{
     display: block;
     padding: 0;
+    padding-top: 10px;
+    padding-bottom: 5px;
     margin: 0;
-    font-size: 18px;
+    padding-left: 30px;
+    font-family: "SAO UI";
   }
   .title-bar-contents p{
     display: block;
     padding: 0;
+    padding-left: 30px;
+    padding-bottom: 10px;
     margin: 0;
-    font-size: 12px;
   }
+  .title-bar-space{
+    background: url(images/b001.gif);
+  }
+  .fa-rocket:hover{
+    animation: rocket 2s ease .5s infinite;
+  }
+  @keyframes rocket{
+    0%{
+      transform: rotate(0deg);
+    }
+    100%{
+      transform: rotate(360deg);
+    }
+  }
+  /*
+  @keyframes rocket{
+    0%{
+      transform: translate(0);
+    }
+    40%{
+      transform: translate(150px,-150px);
+    }
+    50%{
+      transform: translate(-800px,-150px);
+    }
+    60%{
+      transform: translate(-800px,800px);
+    }
+    100%{
+      transform: translate(0,0);
+    }
+  }
+  */
   /*メインコンテンツ設定----------------------------*/
-
   .page{
     width: 100%;
-    /*background: papayawhip;*/
     background: url(images/b001.gif);
   }
   .main{
-    width: 320px;/*768*/
+    width: 768px;
     margin: 0 auto;
     background: url(images/b001.gif);
     overflow: hidden;
     padding: 0;
   }
   .maincontents{
-    width: 320px;/*544*/
+    width: 544px;
     float: left;
     background: white;
-    padding: 5px;
+    padding: 20px;/*20*/
+    margin-right: 20px;
+    border: 1px solid silver;
   }
-  .maincontents h1{
-    text-align: center;
-    font-size: 24px;
+  .main-title{
+    width: 100%;
+  }
+  .maincontents h1{ 
+    font-size: 30px;
     font-family: "SAO UI";
-    font-weight: 300;
-    margin: 0;
+    font-weight: 400;
+    margin: 0 auto;
     padding: 0;
-    padding-top: 5px;
+    text-align: center;
+    position: relative;
+    display: block; 
+    width: 200px;
+    padding: 0 10px;
+    border-top: solid 2px black;
+    border-bottom: solid 2px black;
+  }
+  .maincontents h1:before,.maincontents h1:after{
+    content: "";
+    position: absolute;
+    top: -7px;
+    width: 2px;
+    height: calc(100% + 14px);
+    background-color: black;
+  }
+  .maincontents h1:before{left: 7px;}
+  .maincontents h1:after{right: 7px;}
+
+  .maincontents h1:first-letter{
+    font-size: 35px;
+    color: red;
   }
   .maincontents h3{
     margin: 0;
     padding: 0;
-    font-size: 14px;
+    padding-bottom: 3px;
+    font-size: 16px;
   }
   .maincontents p{
     margin: 0;
-    font-size: 12px;
+    font-size: 15px;
   }
+  /*ホームのメインコンテンツ--------------------------*/
   .section{
-    padding: 10px 0;
+    padding: 20px 0 10px 0;
     border-bottom: 1px dashed silver;
   }
   .section:last-child{
     border-bottom: none;
     padding-bottom: 0;
   }
+  .section a:hover{
+    color: navy;
+    text-decoration: underline;
+  }
   p.toukou{
-    font-size: 10px;
+    font-size: 13px;
     padding-top: 3px;
   }
+  p.toukou:before{
+    font-family: "FontAwesome";
+    content: "  \f040";
+  }
+  /*ゲームのメインコンテンツ--------------------*/
+  #select_value{
+    position: relative;
+    bottom: 33px;
+  }
+  .description{
+    width: 100%;
+    padding: 20px 0;
+    border-bottom: 1px dashed silver;
+  }
+  .description :first-child{
+    padding-top: 10px;
+  }
+  .description:last-child{
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+  .description img{
+    margin: 0 auto;
+    display: block;
+    padding-bottom: 5px;
+  }
+  .description ul{
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+  }
+  .game-section{
+    padding: 10px 0;
+  }
+  /*高専祭のメインコンテンツ-------------------*/
+  .fes-h{
+    width: 100%;
+    text-align: center;  
+  }
+  .fes-h h3{
+    margin: 0 auto;
+    padding-top: 15px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .fes-h h3:before{
+    content: "↓　　　　　　　　　　";
+    font-weight: 600;
+  }
+  .fes-h h3:after{
+    content: "　　　　　　　　　　↓";
+    font-weight: 600;
+  }
+  .fes-section{
+    padding-top: 20px;
+  }
+  .fes-section dl{
+    font-size: 15px;
+    padding-left: 0px;
+  }
+  .fes-section dt{
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .fes-section dd{
+    padding-bottom: 20px;
+    margin-left: 20px;
+  }
+  dd.none{
+    padding-bottom: 0px;
+  }
+  dd.chuui{
+    font-size: 14px;
+  }
+  .shoukai{
+    display: inline-block;
+    position: relative;
+  }
+  .shoukai img{
+    width: 200px;
+    height: 120px;
+    transition: linear 0.3s;
+  }
+  .shoukai:hover img{
+    background: white;
+    opacity: 0.1;     
+  }
+  .shoukai span{
+    position: absolute;
+    left: 0; top: 40%; right: 0;
+    display: block;
+    margin: auto;
+    width: 80%;
+    color: black;
+    opacity: 0;
+    text-align: center;
+    transition: linear 0.3s;
+  }
+  .shoukai:hover span{
+    opacity: 1;
+    font-size: 15px;
+  }
+  /*aboutusのメインコンテンツ------------------*/
+  .aboutus-section h3,.fes-section h3{
+    font-size: 20px;
+    border-left: 3px solid skyblue;
+    padding: 0;
+    padding-left: 10px;
+    margin: 20px 0 12px 0;
+  }
+  .aboutus-section p{
+    font-size: 15px;
+  }
+  /*サブコンテンツ---------------------------*/
   .subcontents{
     width: 162px;
     float: left;
     padding: 0;
-    /*background: lightblue;
-    box-shadow: 0px 5px 10px 2px rgba(0,0,0,0.3);
-    */
-    display: none;
   }
   .about{
     border: 1px solid silver;
@@ -1135,17 +1323,23 @@ a:visited{
   }
   .about h5{
     text-align: center;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 300;
     padding: 2px 0;
     margin: 0;
     background: skyblue;
     border-bottom: 1px dashed black;
   }
+  .about h5:before{
+    content: "/　　　　　";
+  }
+  .about h5:after{
+    content: "　　　　　/";
+  }
   .about p{
     display: block;
     margin: 0;
-    padding: 2px 7px;
+    padding: 2px 6px;
     font-size: 14px;
   }
   .submenu ul{
@@ -1153,9 +1347,10 @@ a:visited{
     margin-top: 50px;
     padding: 0;
     border: 1px solid skyblue;
+    background: white;
   }
   .submenu-title{
-    font-size: 15px;
+    font-size: 14px;
     padding: 5px 0 5px 15px;
     background: skyblue;
     color: white;
@@ -1170,7 +1365,7 @@ a:visited{
   }
   .submenu a{
     display: block;
-    padding: 2px 0;
+    padding: 6px 0;
     font-size: 14px;
     color: black;
   }
@@ -1178,56 +1373,75 @@ a:visited{
     background: lightblue;
     color: blue;
   }
-  /*フッター設定-------------------------*/
+  #folder-menu ul{
+    margin: 0;
+    padding: 0;
+    border-left: none;
+    border-right: none;
+  }
+  #folder-menu li{
+    display: none;
+  }
+  #folder-menu a{
+    padding-left: 0;
+  }
+  .fa-chevron-circle-down{
+    transition: 0.33s linear;
+  }
+  .kaiten{
+    transform: rotate(180deg);
+  }
+  .page-top{
+    margin: 0;
+    padding: 0;
+    display: none;
+  }
+  .page-top p{
+    margin: 0 auto;
+    padding: 0;
+    position: fixed;
+    bottom: 5%;
+  }
+  .move-page-top{
+    display: block;
+    background: #D36015;
+    width: 80px;
+    height: 50px;
 
+    color: #fff;
+    line-height: 50px;
+    text-decoration: none;
+    text-align: center;
+
+    transition:all 1s;
+  }
+  .move-page-top:hover{
+    opacity: 0.85;
+    cursor: pointer;
+  }
+
+  /*フッター設定--------------------------------*/
+  .footer-bar-space{
+    background: url(images/b001.gif);
+  }
   .footer-container{
     padding: 0px;
     width: 100%;
-    /*background: papayawhip;*/
-    background: url(images/b001.gif);
+    background: skyblue;
+    box-shadow: 0px 10px 10px -10px rgba(0,0,0,0.8) inset;
   }
-  /*
-  .footer-container a{
-    font-size: 14px;
-  }
-  .footer-nav{
-    display: flex;
-    justify-content: space-around;
+  .info{
     color: white;
     width: 768px;
     margin: 0 auto;
-    background: green;
-    border-top: 1px solid black;
-  }
-  .footer-nav li,.info li{
-    margin: 0;
-    padding: 0;
-  }
-  .footer-nav a{
-    color: white;
-    opacity: 0.6;
-  }
-  .footer-nav a:hover{
-    background: gray;
-  }
-  */
-  .info{
-    background: yellowgreen;
-    color: white;
-    width: 320px;
-    margin: 0 auto;
     padding: 0;
     overflow: hidden;
-    font-size: 8px;
+    font-size: 12px;
   }
   .copyright{
     display: block;
-    float: left;
     padding: 0 5px;
-  }
-  .info address{
-    float: right;
-    padding: 0 5px;
-    margin-top: 2.5px;
-  }
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+  } 
 } 

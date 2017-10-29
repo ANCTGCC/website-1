@@ -59,11 +59,27 @@ $(function(){
 });
 
 //メニューのアニメーション
+//$(function(){
+  //$("#jQueryPush").one("click",function(){
+    //$(".navbar i").css("animation-name","rolling");
+    //setTimeout(function(){
+      //$(".navbar i").css("animation-name","");(
+          //},3000);
+        //});
+      //});
 $(function(){
-  $("#jQueryPush").one("click",function(){
-    $(".navbar i").css("animation-name","rolling");
-    setTimeout(function(){
-      $(".navbar i").css("animation-name","");
+  $("#jQueryPush").one("click", function(){
+    $(".navbar li:not(.title):nth-child(1)").animate({
+      opacity: 1,
+    },1000);
+    $(".navbar li:not(.title):nth-child(2)").animate({
+      opacity: 1,
+    },2000);
+    $(".navbar li:not(.title):nth-child(3)").animate({
+      opacity: 1,
     },3000);
+    $(".navbar li:not(.title):nth-child(4)").animate({
+      opacity: 1,
+    },4000);  
   });
 });
