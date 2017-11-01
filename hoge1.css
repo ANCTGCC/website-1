@@ -23,7 +23,10 @@ a{
 a:visited{
   color: navy;
 }
-
+a[target="_blank"]::after{
+  font-family: FontAwesome;
+  content: " \f08e";
+}
 @media screen and (min-width: 1200px){
   #jQueryPush{
     display: none;
@@ -901,6 +904,10 @@ a:visited{
     padding: 6px 0;
     font-size: 14px;
     color: black;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
   .submenu a:hover{
     background: lightblue;
