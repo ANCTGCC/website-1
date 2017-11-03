@@ -29,8 +29,21 @@ a[target="_blank"]::after{
 }
 .banana{
   position: absolute;
-  bottom: 20px;
-  left: 20px;
+  bottom: 16px;
+  left: 40px;
+  opacity: 0;
+}
+.title:hover .banana{
+  animation: banana 5s;
+  animation-delay: 15s;
+}
+@keyframes banana{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 1;
+  }
 }
 @media screen and (min-width: 1200px){
   #jQueryPush{
@@ -595,6 +608,9 @@ a[target="_blank"]::after{
     padding: 12px 0;
     width: 404px;
   }
+  .banana{
+    display: none;
+  }
   .navbar li:not(.title){
     margin: 0;
     width: 680px;
@@ -1094,6 +1110,9 @@ a[target="_blank"]::after{
   .navbar li.title{
     padding: 12px 0;
     width: 404px;
+  }
+  .banana{
+    display: none;
   }
   .navbar li:not(.title){
     margin: 0;
