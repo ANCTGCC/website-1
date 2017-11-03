@@ -25,8 +25,8 @@ $(function(){
         // 最下部から現在位置までの距離を計算して、変数[under]に格納
         var under = $('body').height() - (now + $(window).height());
         // 最上部から現在位置までの距離(now)が800以上かつ
-        // 最下部から現在位置までの距離(under)が50px以上かつ…
-        if(now > 800 && 50 < under){
+        // 最下部から現在位置までの距離(under)が0px以上かつ…
+        if(now >= 800 && 0 <= under){
           // 非表示状態だったら
           if(!visible){
             // [#page-top]をゆっくりフェードインする
@@ -59,27 +59,30 @@ $(function(){
 });
 
 //メニューのアニメーション
-//$(function(){
-  //$("#jQueryPush").one("click",function(){
-    //$(".navbar i").css("animation-name","rolling");
-    //setTimeout(function(){
-      //$(".navbar i").css("animation-name","");(
-          //},3000);
-        //});
-      //});
 $(function(){
   $("#jQueryPush").one("click", function(){
-    $(".navbar li:not(.title):nth-child(1)").animate({
+    $(".navbar li:not(.title):nth-child(1)").delay(500).animate({
       opacity: 1,
     },1000);
-    $(".navbar li:not(.title):nth-child(2)").animate({
+    $(".navbar li:not(.title):nth-child(2)").delay(1000).animate({
       opacity: 1,
-    },2000);
-    $(".navbar li:not(.title):nth-child(3)").animate({
+    },1000);
+    $(".navbar li:not(.title):nth-child(3)").delay(1500).animate({
       opacity: 1,
-    },3000);
-    $(".navbar li:not(.title):nth-child(4)").animate({
+    },1000);
+    $(".navbar li:not(.title):nth-child(4)").delay(2000).animate({
       opacity: 1,
-    },4000);  
+    },1000);  
   });
 });
+
+//1199px以下属性追加twitter欄
+//$(window).on("load resize",function(){
+  //var screen_width = $(window).width();
+  //if (screen_width <= 1199){
+    //$(".twitter i").attr("data-width","100");
+  //}
+  //if (screen_width >= 1200){
+    //$(".twitter i").attr("data-width","300");
+  //}
+//});
