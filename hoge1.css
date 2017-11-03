@@ -34,7 +34,7 @@ a[target="_blank"]::after{
   opacity: 0;
 }
 .title:hover .banana{
-  animation: banana 5s;
+  animation: banana 2s;
   animation-delay: 15s;
 }
 @keyframes banana{
@@ -444,7 +444,7 @@ a[target="_blank"]::after{
     display: block;
     margin: 0;
     padding: 2px 7px;
-    font-size: 16px;
+    font-size: 18px;
   }
   .twitter{
     margin-top: 50px;
@@ -452,14 +452,23 @@ a[target="_blank"]::after{
   }
   .twitter h3{
     display: block;
-    background: skyblue;
+    background: white;
     text-align: center;
     margin: 0;
     padding: 5px 0;
     border-bottom: 1px dashed black;
+    font-weight: 500;
   }
   .twitter i{
-    color: blue;
+    color: skyblue;
+    border-radius: 100px;
+    padding: 4px;
+    border: 2px solid skyblue;
+    transition: .3s linear;
+  }
+  .twitter h3:hover i{
+    color: white;
+    background: skyblue;
   }
   .submenu ul{
     margin: 0;
