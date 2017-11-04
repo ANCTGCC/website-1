@@ -461,14 +461,6 @@ a[target="_blank"]::after{
   }
   .twitter i{
     color: skyblue;
-    border-radius: 100px;
-    padding: 4px;
-    border: 2px solid skyblue;
-    transition: .3s linear;
-  }
-  .twitter h3:hover i{
-    color: white;
-    background: skyblue;
   }
   .submenu ul{
     margin: 0;
