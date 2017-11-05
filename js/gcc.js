@@ -60,6 +60,10 @@ $(function(){
 
 //メニューのアニメーション
 $(function(){
+  //ハンバーガーメニューのアニメーション
+  $("#jQueryPush").on("click",function(){
+    $("#jQueryPush").toggleClass("kaiten2");
+  });
   $("#jQueryPush").one("click", function(){
     $(".navbar li:not(.title):nth-child(1)").delay(500).animate({
       opacity: 1,

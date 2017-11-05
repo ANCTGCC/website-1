@@ -205,26 +205,6 @@ a[target="_blank"]::after{
       transform: rotate(-360deg) translate(0px,0px);
     }
   }
-  /*
-  @keyframes rocket{
-    0%{
-      transform: translate(0);
-    }
-    40%{
-      transform: translate(150px,-150px);
-    }
-    50%{
-      transform: translate(-800px,-150px);
-    }
-    60%{
-      transform: translate(-150px,160px);
-    }
-    100%{
-      transform: translate(0,0);
-    }
-  }
-  */
-
   /*メインコンテンツ--------------------*/
   .page{
     width: 100%;
@@ -590,7 +570,6 @@ a[target="_blank"]::after{
     width: 728px;
     margin: 0 auto;
     position: relative;
-    top: 0; left: 0;
   }
   .logo{
     vertical-align: middle;
@@ -640,34 +619,18 @@ a[target="_blank"]::after{
     top: 24px; left: 680px;
     background: white;
   }
+  #jQueryPush{
+    transition: 1.5s ease;
+  }
+  .kaiten2{
+    transform: rotate(360deg);
+  }
   #jQueryPush:hover{
     background: lightblue;
-  }
-  .menu
-  { 
-    margin: 0;
-    width: 40px; height: 30px; 
-    border: 1px solid darkgray; border-radius: 4px; 
-  }
-  .menu1
-  { 
-    width: 20px; height: 2px; background: gray; 
-    top: 9px; left: 11px; position: absolute; 
     cursor: pointer;
-  } 
-  .menu2
-  { 
-    width: 20px; height: 2px; background: gray; 
-    top: 15px; left: 11px; position: absolute;
   }
-  .menu3
-  { 
-    width: 20px; height: 2px; background: gray; 
-    top: 21px; left: 11px;position: absolute; 
-  }
-  .menu:hover{
-    background: lightblue;
-    cursor: pointer;
+  #jQueryPush i{
+    font-size: 35px;
   }
   /*タイトルバー設定---------------------------*/
   .title-bar{
@@ -709,25 +672,6 @@ a[target="_blank"]::after{
       transform: rotate(-360deg);
     }
   }
-  /*
-  @keyframes rocket{
-    0%{
-      transform: translate(0);
-    }
-    40%{
-      transform: translate(150px,-150px);
-    }
-    50%{
-      transform: translate(-800px,-150px);
-    }
-    60%{
-      transform: translate(-800px,800px);
-    }
-    100%{
-      transform: translate(0,0);
-    }
-  }
-  */
   /*メインコンテンツ設定----------------------------*/
   .page{
     width: 100%;
@@ -1082,18 +1026,22 @@ a[target="_blank"]::after{
 
 @media screen and (max-device-width: 767px){
   /*グローバルナビゲーション設定---------------------------------------------------------------------------------------------------*/
+  header{
+    margin: 0;padding: 0;
+  }
   #jQueryBox{
     display: none;
   }
   #gnav{
-    display: none;
+    width: 100%;
+    background: white;
+    box-shadow: 0px 10px 10px -10px rgba(0,0,0,0.5);
   }
   .navbar{
     overflow: hidden;
     width: 320px;
     margin: 0 auto;
     position: relative;
-    top: 0; left: 0;
   }
   .logo{
     display: none;
@@ -1101,45 +1049,68 @@ a[target="_blank"]::after{
   .logo2{
     display: none;
   }
+  .navbar li{
+    margin: 0;
+    width: 100%;
+  }
+  .navbar li.title{
+    padding: 20px 0;
+  }
   .banana{
     display: none;
   }
-  .menu
-  { 
+  .navbar li:not(.title){
+    display: inline-block;
     margin: 0;
-    width: 40px; height: 30px; 
-    border: 1px solid darkgray; border-radius: 4px; 
+    margin-left: -40px;
+    padding: 0;
+    width: 100%;
+    opacity: 0;
   }
-  .menu1
-  { 
-    width: 20px; height: 2px; background: gray; 
-    top: 9px; left: 11px; position: absolute; 
-    cursor: pointer;
-  } 
-  .menu2
-  { 
-    width: 20px; height: 2px; background: gray; 
-    top: 15px; left: 11px; position: absolute;
+  .navbar li:not(.title) a{
+    display: block;
+    width: 320px;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 16px;
+    color: black;
   }
-  .menu3
-  { 
-    width: 20px; height: 2px; background: gray; 
-    top: 21px; left: 11px;position: absolute; 
+  .navbar li:not(.title) a:hover{
+    background: skyblue;
+    color: white;
+    text-shadow: 1px 1px black;
+    font-weight: 600;
   }
-  .menu:hover{
+  .navbar li.title a:hover{
+    opacity: 0.8;
+  }
+  #gnav ul #jQueryPush{
+    margin: 0;
+    padding: 0;
+    display: block;
+    width: 27px;
+    position: absolute;
+    top: 5px; left: 280px;
+  }
+  #jQueryPush:hover{
     background: lightblue;
-    cursor: pointer;
+  }
+  #jQueryPush i{
+    font-size: 30px;
   }
   /*タイトルバー設定---------------------------*/
+  header{
+    margin: 0;
+    padding: 0;
+  }
   .title-bar{
-    display: none;
     width: 100%;
     background: skyblue;
     box-shadow: 0px 10px 10px -10px rgba(0,0,0,0.8) inset;
   }
   .title-bar-contents{
     margin: 0 auto;
-    width: 768px;
+    width: 320px;
   }
   .title-bar-contents h1{
     display: block;
@@ -1148,6 +1119,7 @@ a[target="_blank"]::after{
     padding-bottom: 5px;
     margin: 0;
     padding-left: 30px;
+    font-size: 22px;
   }
   .title-bar-contents p{
     display: block;
@@ -1155,14 +1127,14 @@ a[target="_blank"]::after{
     padding-left: 30px;
     padding-bottom: 10px;
     margin: 0;
+    font-size: 14px;
   }
   .title-bar-space{
-    display: none;
-    background: url(images/b001.gif);
+    background: white;
   }
   .fa-rocket:hover{
     animation: rocket 2s ease .5s infinite;
-    transform-origin: -80% -80%;
+    transform-origin: -10% -10%;
   }
   @keyframes rocket{
     0%{
@@ -1178,19 +1150,15 @@ a[target="_blank"]::after{
     background: url(images/b001.gif);
   }
   .main{
-    display: none;
-    width: 768px;
+    width: 320px;
     margin: 0 auto;
     background: url(images/b001.gif);
-    overflow: hidden;
     padding: 0;
   }
   .maincontents{
-    width: 544px;
-    float: left;
+    width: 314px;
     background: white;
-    padding: 20px;/*20*/
-    margin-right: 20px;
+    padding: 16px 2px;
     border: 1px solid silver;
   }
   .main-title{
@@ -1205,7 +1173,7 @@ a[target="_blank"]::after{
     position: relative;
     display: block; 
     width: 200px;
-    padding: 0 10px;
+    padding: 4px 10px;
     border-top: solid 2px black;
     border-bottom: solid 2px black;
   }
@@ -1239,7 +1207,7 @@ a[target="_blank"]::after{
     width: 160px;
   }
   .section{
-    padding: 20px 0 10px 0;
+    padding: 20px 6px 10px 6px;
     border-bottom: 1px dashed silver;
   }
   .section:last-child{
@@ -1378,8 +1346,7 @@ a[target="_blank"]::after{
   }
   /*サブコンテンツ---------------------------*/
   .subcontents{
-    width: 162px;
-    float: left;
+    width: 320px;
     padding: 0;
   }
   .about{
@@ -1388,9 +1355,9 @@ a[target="_blank"]::after{
   }
   .about h5{
     text-align: center;
-    font-size: 16px;
+    font-size: 19px;
     font-weight: 300;
-    padding: 2px 0;
+    padding: 6px 0;
     margin: 0;
     background: skyblue;
     border-bottom: 1px dashed black;
@@ -1398,8 +1365,8 @@ a[target="_blank"]::after{
   .about p{
     display: block;
     margin: 0;
-    padding: 2px 6px;
-    font-size: 14px;
+    padding: 2px 8px;
+    font-size: 15px;
   }
   .twitter{
     margin-top: 50px;
@@ -1501,11 +1468,9 @@ a[target="_blank"]::after{
 
   /*フッター設定--------------------------------*/
   .footer-bar-space{
-    display: none;
     background: url(images/b001.gif);
   }
   .footer-container{
-    display: none;
     padding: 0px;
     width: 100%;
     background: skyblue;
@@ -1513,7 +1478,7 @@ a[target="_blank"]::after{
   }
   .info{
     color: white;
-    width: 768px;
+    width: 320px;
     margin: 0 auto;
     padding: 0;
     overflow: hidden;
