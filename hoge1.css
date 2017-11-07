@@ -569,7 +569,6 @@ a[target="_blank"]::after{
 	.navbar a:hover{
 		background: #428AC9;
 		color: white;
-
 	}
 	/*タイトルバー設定---------------------------*/
 	.title-bar{
@@ -977,7 +976,11 @@ a[target="_blank"]::after{
 	/*グローバルナビゲーション設定---------------------------------------------------------------------------------------------------*/
 	#gnav{
 		margin: 0;
-		background: blue;
+	}
+	.nav-contents{
+		/*↓2つのプロパティ削除で幅100%*/
+		width: 320px;
+		margin: 0 auto;
 	}
 	.navbar{
 		list-style: none;
@@ -985,21 +988,21 @@ a[target="_blank"]::after{
 		padding: 0;
 	}
 	.navbar li{
-		border-bottom: 1px solid navy;
 		opacity: 0;
 	}
-	#gnav li a{
+	.navbar a{
 		display: block;
 		width: 100%;
 		padding: 10px 0;
 		text-decoration: none;
 		text-align: center;
+		color: black;
 	}
 	#jQueryBox{
 		display: none;
 	}
 	#jQueryPush{
-		margin: 0 20px 0 auto;
+		margin: auto 20px auto auto;
 		padding: 0;
 		display: block;
 		width: 27px;
@@ -1012,19 +1015,30 @@ a[target="_blank"]::after{
 		display: none;
 	}
 	.title{
-		background: white;
+		width: 320px;
+		margin: 0 auto;
+		display: flex;
 	}
 	.kaiten2{
 		transform: rotate(360deg);
 	}
-	/*タイトルバー設定---------------------------*/
-	header{
-		margin: 0;
-		padding: 0;
+	#jQueryPush:hover{
+		cursor: pointer;
 	}
+	.navbar li:first-child{
+		border-top: 1px solid silver;
+	}
+	.navbar a:active{
+		background: #428AC9;
+		color: white;
+	}
+
+
+
+	/*タイトルバー設定---------------------------*/
 	.title-bar{
 		width: 100%;
-		background: skyblue;
+		background: background: #428AC9;;
 		box-shadow: 0px 10px 10px -10px rgba(0,0,0,0.8) inset;
 	}
 	.title-bar-contents{
@@ -1071,7 +1085,6 @@ a[target="_blank"]::after{
 	.main{
 		width: 320px;
 		margin: 0 auto;
-		background: url(images/b001.gif);
 		padding: 0;
 	}
 	.maincontents{
@@ -1161,6 +1174,7 @@ a[target="_blank"]::after{
 	/*ゲームのメインコンテンツ--------------------*/
 	#games h1{
 		padding: 2px 45px 2px 65px;
+		margin-bottom: 20px;
 	}
 	#games h1:before{
 		font-family: "FontAwesome";
@@ -1168,23 +1182,26 @@ a[target="_blank"]::after{
 	}
 	#select_value{
 		position: relative;
-		bottom: 33px;
+		top: 20px;
+		left: 32%;
 	}
 	.description{
 		width: 100%;
-		padding: 20px 0;
-		border-bottom: 1px dashed silver;
+		margin: 10px 0;
+		border: none;
 	}
-	.description :first-child{
-		padding-top: 10px;
-	}
-	.description:last-child{
-		padding-bottom: 0;
-		border-bottom: none;
+	.description h3{
+		margin: 0 0 10px 0;
+		padding: 0 0 5px 5px;
+		font-size: 18px;
+		font-weight: 600;
+		border-left: 6px solid #428AC9;
+		border-bottom: 1px solid silver;
 	}
 	.description img{
 		margin: 0 auto;
 		display: block;
+		width: 320px;
 		padding-bottom: 5px;
 	}
 	.description ul{
@@ -1193,7 +1210,7 @@ a[target="_blank"]::after{
 		font-size: 15px;
 	}
 	.game-section{
-		padding: 10px 0;
+		padding: 10px 10px;
 	}
 	/*高専祭のメインコンテンツ-------------------*/
 	#festival h1{
@@ -1210,19 +1227,17 @@ a[target="_blank"]::after{
 	.fes-h h3{
 		margin: 0 auto;
 		padding-top: 15px;
-		font-size: 16px;
-		font-weight: 500;
+		font-size: 15px;
 	}
-	.fes-h h3:before{
-		content: "↓　　";
-		font-weight: 600;
-	}
-	.fes-h h3:after{
-		content: "　　↓";
-		font-weight: 600;
+	.fes-h h3:before,.fes-h h3:after{
+		content: "";
 	}
 	.fes-section{
 		padding-top: 20px;
+	}
+	.fes-section h3{
+		border-left: 6px solid #428AC9;
+		border-bottom: 1px solid silver;
 	}
 	.fes-section dl{
 		font-size: 15px;
@@ -1294,24 +1309,7 @@ a[target="_blank"]::after{
 		padding: 0;
 	}
 	.about{
-		border: 1px solid silver;
-		background: white;
 		display: none;
-	}
-	.about h5{
-		text-align: center;
-		font-size: 19px;
-		font-weight: 300;
-		padding: 6px 0;
-		margin: 0;
-		background: skyblue;
-		border-bottom: 1px dashed black;
-	}
-	.about p{
-		display: block;
-		margin: 0;
-		padding: 2px 8px;
-		font-size: 15px;
 	}
 	.twitter{
 		margin-top: 20px;
@@ -1322,7 +1320,7 @@ a[target="_blank"]::after{
 		background: white;
 		text-align: center;
 		margin: 0;
-		padding: 10px 0;
+		padding: 2px 0;
 		border-bottom: 1px dashed silver;
 		font-size: 16px;
 	}
@@ -1336,19 +1334,19 @@ a[target="_blank"]::after{
 		margin: 0;
 		margin-top: 50px;
 		padding: 0;
-		border: 1px solid skyblue;
+		border: 1px solid silver;
 		background: white;
 	}
 	.submenu-title{
 		font-size: 14px;
 		padding: 5px 0 5px 15px;
-		background: skyblue;
+		background: #428AC9;
 		color: white;
 		font-weight: 600;
 		text-shadow: 1px 1px 5px black;
 	}
 	.submenu li:not(:last-child){
-		border-bottom: 1px solid skyblue;
+		border-bottom: 1px solid silver;
 	}
 	.submenu li i{
 		padding: 0 6px;
@@ -1363,7 +1361,7 @@ a[target="_blank"]::after{
 		white-space: nowrap;
 		text-overflow: ellipsis;
 	}
-	.submenu a:hover{
+	.submenu a:active{
 		background: lightblue;
 		color: blue;
 	}
@@ -1389,18 +1387,21 @@ a[target="_blank"]::after{
 		margin: 0;
 		padding: 0;
 		display: none;
+		font-size: 28px;
 	}
 	.page-top p{
 		margin: 0 auto;
 		padding: 0;
 		position: fixed;
-		bottom: 9%;
+		bottom: 7%;
+		right: 5%;
 	}
 	.move-page-top{
 		display: block;
 		background: #D36015;
-		width: 80px;
-		height: 50px;
+		width: 38px;
+		height: 38px;
+		border-radius: 50%;
 
 		color: #fff;
 		line-height: 50px;
@@ -1409,9 +1410,14 @@ a[target="_blank"]::after{
 
 		transition:all 1s;
 	}
-	.move-page-top:hover{
+	.move-page-top span{
+		display: none;
+	}
+	.move-page-top i{
+		transform: translateY(-7px);
+	}
+	.move-page-top:active{
 		opacity: 0.85;
-		cursor: pointer;
 	}
 
 	/*フッター設定--------------------------------*/
@@ -1421,7 +1427,7 @@ a[target="_blank"]::after{
 	.footer-container{
 		padding: 0px;
 		width: 100%;
-		background: skyblue;
+		background: #428AC9;
 		box-shadow: 0px 10px 10px -10px rgba(0,0,0,0.8) inset;
 	}
 	.info{
