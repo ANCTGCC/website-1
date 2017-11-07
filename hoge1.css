@@ -1090,7 +1090,7 @@ a[target="_blank"]::after{
 	.maincontents{
 		width: 320px;
 		background: white;
-		padding: 16px 2px;
+		padding: 16px 0;
 		border: none;
 	}
 	.main-title{
