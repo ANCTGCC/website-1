@@ -80,13 +80,13 @@ $(function(){
   });
 });
 
-//1199px以下属性追加twitter欄
-//$(window).on("load resize",function(){
-  //var screen_width = $(window).width();
-  //if (screen_width <= 1199){
-    //$(".twitter i").attr("data-width","100");
-  //}
-  //if (screen_width >= 1200){
-    //$(".twitter i").attr("data-width","300");
-  //}
-//});
+//767px以下属性変更twitter欄
+$(window).on("load resize",function(){
+  var screen_width = $(window).width();
+  if (screen_width <= 767){
+    $(".timeline a").attr("data-height","200");
+  }
+  if (screen_width >= 768){
+    $(".timeline a").attr("data-height","400");
+  }
+});

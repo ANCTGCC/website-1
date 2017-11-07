@@ -37,6 +37,10 @@ a[target="_blank"]::after{
 	animation: banana 2s;
 	animation-delay: 15s;
 }
+h3{
+	margin: 0;
+	padding: 0;
+}
 @keyframes banana{
 	0%{
 		opacity: 1;
@@ -703,9 +707,6 @@ a[target="_blank"]::after{
 		padding: 20px 0;
 		border-bottom: 1px dashed silver;
 	}
-	.description :first-child{
-		padding-top: 10px;
-	}
 	.description:last-child{
 		padding-bottom: 0;
 		border-bottom: none;
@@ -798,12 +799,13 @@ a[target="_blank"]::after{
 	#aboutUS h1{
 		width: 180px;
 	}
-	.aboutus-section h3,.fes-section h3{
+	.description h3,.aboutus-section h3,.fes-section h3{
 		font-size: 20px;
-		border-left: 3px solid #428AC9;
+		border-left: 6px solid #428AC9;
+		border-bottom: 1px solid silver;
 		padding: 0;
-		padding-left: 10px;
-		margin: 20px 0 12px 0;
+		padding: 5px 0 5px 5px;
+		margin: 15px 0 12px 0;
 	}
 	.aboutus-section p{
 		font-size: 15px;
@@ -1136,12 +1138,21 @@ a[target="_blank"]::after{
 	.maincontents h3{
 		margin: 0;
 		padding: 0;
-		padding-bottom: 3px;
+		/*padding-bottom: 3px;*/
 		font-size: 16px;
 	}
 	.maincontents p{
 		margin: 0;
 		font-size: 15px;
+	}
+
+	.description h3,.aboutus-section h3,.fes-section h3{
+		margin: 0 0 10px 0;
+		padding: 5px 0 5px 5px;
+		font-size: 18px;
+		font-weight: 600;
+		border-left: 6px solid #428AC9;
+		border-bottom: 1px solid silver;
 	}
 	/*ホームのメインコンテンツ--------------------------*/
 	#home_news h1{
@@ -1174,7 +1185,6 @@ a[target="_blank"]::after{
 	/*ゲームのメインコンテンツ--------------------*/
 	#games h1{
 		padding: 2px 45px 2px 65px;
-		margin-bottom: 20px;
 	}
 	#games h1:before{
 		font-family: "FontAwesome";
@@ -1191,12 +1201,8 @@ a[target="_blank"]::after{
 		border: none;
 	}
 	.description h3{
-		margin: 0 0 10px 0;
-		padding: 0 0 5px 5px;
-		font-size: 18px;
-		font-weight: 600;
-		border-left: 6px solid #428AC9;
-		border-bottom: 1px solid silver;
+		margin-top: 10px;
+		margin-bottom: 20px;
 	}
 	.description img{
 		margin: 0 auto;
@@ -1236,12 +1242,14 @@ a[target="_blank"]::after{
 		padding-top: 20px;
 	}
 	.fes-section h3{
-		border-left: 6px solid #428AC9;
-		border-bottom: 1px solid silver;
+		margin-top: 10px;
+	}
+	.fes-section p{
+		padding: 0 5px;
 	}
 	.fes-section dl{
 		font-size: 15px;
-		padding-left: 0px;
+		padding: 0 5px;
 	}
 	.fes-section dt{
 		font-size: 15px;
@@ -1249,7 +1257,7 @@ a[target="_blank"]::after{
 	}
 	.fes-section dd{
 		padding-bottom: 20px;
-		margin-left: 20px;
+		margin-left: 0px;
 	}
 	dd.none{
 		padding-bottom: 0px;
@@ -1262,8 +1270,8 @@ a[target="_blank"]::after{
 		position: relative;
 	}
 	.shoukai img{
-		width: 200px;
-		height: 120px;
+		width: 152px;
+		height: 100px;
 		transition: linear 0.3s;
 	}
 	.shoukai:hover img{
@@ -1276,12 +1284,13 @@ a[target="_blank"]::after{
 		display: block;
 		margin: auto;
 		width: 80%;
+		font-size: 12px;
 		color: black;
 		opacity: 0;
 		text-align: center;
 		transition: linear 0.3s;
 	}
-	.shoukai:hover span{
+	.shoukai:active span{
 		opacity: 1;
 		font-size: 15px;
 	}
@@ -1292,13 +1301,6 @@ a[target="_blank"]::after{
 	#aboutUS h1:before{
 		font-family: "FontAwesome";
 		content: "\f007";
-	}
-	.aboutus-section h3,.fes-section h3{
-		font-size: 20px;
-		border-left: 3px solid skyblue;
-		padding: 0;
-		padding-left: 10px;
-		margin: 20px 0 12px 0;
 	}
 	.aboutus-section p{
 		font-size: 15px;
@@ -1313,21 +1315,24 @@ a[target="_blank"]::after{
 	}
 	.twitter{
 		margin-top: 20px;
-		border: 1px solid skyblue;
+		border: none;
 	}
 	.twitter h3{
 		display: block;
 		background: white;
 		text-align: center;
 		margin: 0;
-		padding: 2px 0;
-		border-bottom: 1px dashed silver;
+		padding: 0;
+		padding-top: 6px;
 		font-size: 16px;
 	}
 	.twitter i{
 		color: blue;
 	}
 	.timeline{
+		display: block;
+	}
+	.follow-button{
 		display: none;
 	}
 	.submenu ul{
