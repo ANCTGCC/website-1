@@ -384,7 +384,7 @@ h3{
 		font-size: 18px;
 	}
 	.twitter{
-		margin-top: 50px;
+		margin-top: 20px;
 		border: 1px solid silver;
 	}
 	.twitter h3{
@@ -404,7 +404,7 @@ h3{
 	}
 	.submenu ul{
 		margin: 0;
-		margin-top: 50px;
+		margin-top: 20px;
 		padding: 0;
 		border: 1px solid silver;
 		background: white;
@@ -839,9 +839,10 @@ h3{
 		font-size: 14px;
 	}
 	.twitter{
-		margin-top: 50px;
+		margin-top: 20px;
 		border: 1px solid silver;
 		padding: 0;
+		background: white;
 	}
 	.twitter h3{
 		display: block;
@@ -862,7 +863,7 @@ h3{
 	}
 	.submenu ul{
 		margin: 0;
-		margin-top: 50px;
+		margin-top: 20px;
 		padding: 0;
 		border: 1px solid silver;
 		background: white;
