@@ -347,12 +347,13 @@ h3{
 	#aboutUS h1{
 		width: 220px;
 	}
-	.aboutus-section h3,.fes-section h3{
-		font-size: 22px;
-		border-left: 5px solid skyblue;
+	.description h3,.aboutus-section h3,.fes-section h3{
+		font-size: 20px;
+		border-left: 6px solid #428AC9;
+		border-bottom: 1px solid silver;
 		padding: 0;
-		padding-left: 12px;
-		margin: 20px 0 12px 0;
+		padding: 5px 0 5px 10px;
+		margin: 15px 0 12px 0;
 	}
 
 	/*サブコンテンツ----------------------*/
