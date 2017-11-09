@@ -322,7 +322,10 @@ h3{
 	.shoukai img{
 		width: 200px;
 		height: 120px;
-		transition: linear 0.3s;
+		transition: linear .3s;
+	}
+	.square img{
+		width: 160px;
 	}
 	.shoukai:hover img{
 		background: white;
@@ -428,6 +431,10 @@ h3{
 		padding: 4px 0;
 		font-size: 16px;
 		color: black;
+
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
 	}
 	.submenu a:hover{
 		background: lightblue;
