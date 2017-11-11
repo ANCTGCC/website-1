@@ -350,6 +350,9 @@ h3{
 	#aboutUS h1{
 		width: 220px;
 	}
+	.aboutus-section{
+		padding-top: 20px;
+	}
 	.description h3,.aboutus-section h3,.fes-section h3{
 		font-size: 20px;
 		border-left: 6px solid #428AC9;
