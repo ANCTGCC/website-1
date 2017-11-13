@@ -240,7 +240,7 @@ h3{
 	}
 	p.toukou:before{
 		font-family: "FontAwesome";
-		content: "  \f040";
+		content: "  \f040 投稿日:";
 	}
 	/*ゲームのメインコンテンツ------*/
 	#games h1{
@@ -275,6 +275,15 @@ h3{
 	}
 	.game-section a:hover{
 		text-decoration: underline;
+	}
+	.game-section li:nth-child(1):before{
+		content: "製作者 : ";
+	}
+	.game-section li:nth-child(2):before{
+		content: "ジャンル : ";
+	}
+	.game-section li:nth-child(3){
+		padding-top: 10px;
 	}
 	/*高専祭のメインコンテンツ---------*/
 	#festival h1{}
@@ -703,7 +712,7 @@ h3{
 	}
 	p.toukou:before{
 		font-family: "FontAwesome";
-		content: "  \f040";
+		content: "  \f040 投稿日:";
 	}
 	/*ゲームのメインコンテンツ--------------------*/
 	#games h1{
@@ -734,6 +743,18 @@ h3{
 	}
 	.game-section{
 		padding: 10px 0;
+	}
+	.game-section ul{
+		padding-top: 10px;
+	}
+	.game-section li:nth-child(1):before{
+		content: "製作者 : ";
+	}
+	.game-section li:nth-child(2):before{
+		content: "ジャンル : ";
+	}
+	.game-section li:nth-child(3){
+		padding-top: 10px;
 	}
 	/*高専祭のメインコンテンツ-------------------*/
 	#festival h1{
@@ -1192,7 +1213,7 @@ h3{
 	}
 	p.toukou:before{
 		font-family: "FontAwesome";
-		content: "  \f040";
+		content: "  \f040 投稿日:";
 	}
 	/*ゲームのメインコンテンツ--------------------*/
 	#games h1{
@@ -1229,6 +1250,15 @@ h3{
 	}
 	.game-section{
 		padding: 10px 10px;
+	}
+	.game-section li:nth-child(1):before{
+		content: "製作者 : ";
+	}
+	.game-section li:nth-child(2):before{
+		content: "ジャンル : ";
+	}
+	.game-section li:nth-child(3){
+		padding-top: 10px;
 	}
 	/*高専祭のメインコンテンツ-------------------*/
 	#festival h1{
