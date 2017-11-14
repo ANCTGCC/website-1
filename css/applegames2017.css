@@ -13,33 +13,50 @@ h1{
 }
 
 .page{
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    background: url(images/b001.gif);
-  }
-  .main{
-    margin: 0 auto;
-    padding: 0;
-    background: white;
-    box-shadow: 1px 1px 10px 1px rgba(0,0,0,0.5);
-  }
-  .main h1{
-    box-sizing: border-box;
-    display: block;
-    padding: 0;
-  }
-  .gamegather{
-    margin: 0 auto;
-    display: block;
-    overflow: hidden;
-  }
-  kbd{
-    background: #dbe4e7;
-    border-radius: 5px;
-    margin: 0 3px;
-    padding: 2px 3px;
-  }
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background: url(images/b001.gif);
+}
+.main{
+  margin: 0 auto;
+  padding: 0;
+  background: white;
+  box-shadow: 1px 1px 10px 1px rgba(0,0,0,0.5);
+  background: url(../images/ghost.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+}
+.bkRGBA{
+  height: 100%;
+  background: rgba(255,255,255,0.7);
+}
+.main h1{
+  box-sizing: border-box;
+  display: block;
+  padding: 0;
+}
+.gamegather{
+  margin: 0 auto;
+  display: block;
+  overflow: hidden;
+}
+kbd{
+  background: #dbe4e7;
+  border-radius: 5px;
+  margin: 0 3px;
+  padding: 2px 3px;
+}
+.game-exp p:nth-child(1):before{
+  content: "製作者: ";
+}
+.game-exp p:nth-child(2):before{
+  content: "操作: ";
+}
+.game-exp p:nth-child(3):before{
+  content: "遊び方: ";
+}
 @media screen and (min-width: 1200px){
   .main{
     width: 1200px;

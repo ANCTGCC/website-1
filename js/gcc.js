@@ -24,9 +24,9 @@ $(function(){
         var now = $(window).scrollTop();
         // 最下部から現在位置までの距離を計算して、変数[under]に格納
         var under = $('body').height() - (now + $(window).height());
-        // 最上部から現在位置までの距離(now)が800以上かつ
+        // 最上部から現在位置までの距離(now)が1300以上かつ
         // 最下部から現在位置までの距離(under)が0px以上かつ…
-        if(now >= 800 && 0 <= under){
+        if(now >= 1300 && 0 <= under){
           // 非表示状態だったら
           if(!visible){
             // [#page-top]をゆっくりフェードインする

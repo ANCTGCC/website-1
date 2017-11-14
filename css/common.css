@@ -255,9 +255,12 @@ h3{
 		left: 20px;
 	}
 	.description{
-		padding: 40px 20px;
+		padding: 40px 0px;
 		overflow: hidden;
 		border-bottom: 1.3px dashed silver;
+	}
+	.description:first-child{
+		padding-top: 0;
 	}
 	.description:last-child{
 		border-bottom: none;
@@ -265,6 +268,7 @@ h3{
 	}
 	.game-img{
 		float: left;
+		border: 1px solid black;
 	}
 	.game-section{
 		display: inline-block;
@@ -736,6 +740,9 @@ h3{
 		padding: 20px 0;
 		border-bottom: 1px dashed silver;
 	}
+	.description:first-child{
+		padding-top: 0;
+	}
 	.description:last-child{
 		padding-bottom: 0;
 		border-bottom: none;
@@ -743,7 +750,8 @@ h3{
 	.description img{
 		margin: 0 auto;
 		display: block;
-		padding-bottom: 5px;
+		margin-bottom: 10px;
+		border: 1px solid black;
 	}
 	.description ul{
 		margin: 0;
