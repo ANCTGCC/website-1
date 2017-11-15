@@ -1250,6 +1250,9 @@ h3{
 		margin: 10px 0;
 		border: none;
 	}
+	.description:first-child{
+		padding-top: 20px;
+	}
 	.description h3{
 		margin-top: 10px;
 		margin-bottom: 20px;
@@ -1258,7 +1261,8 @@ h3{
 		margin: 0 auto;
 		display: block;
 		width: 320px;
-		padding-bottom: 5px;
+		margin-bottom: 5px;
+		border: none;
 	}
 	.description ul{
 		margin: 0;
@@ -1333,6 +1337,9 @@ h3{
 		height: 100px;
 		transition: linear 0.3s;
 	}
+	#fes2017 .shoukai img{
+		height: 152px;
+	}
 	.shoukai:hover img{
 		background: white;
 		opacity: 0.1;     
@@ -1356,6 +1363,7 @@ h3{
 	/*aboutusのメインコンテンツ------------------*/
 	#aboutUS h1{
 		padding: 2px 40px 2px 60px;
+		margin-bottom: 20px;
 	}
 	#aboutUS h1:before{
 		font-family: "FontAwesome";
@@ -1363,6 +1371,7 @@ h3{
 	}
 	.aboutus-section p{
 		font-size: 15px;
+		padding: 5px 0;
 	}
 	/*サブコンテンツ---------------------------*/
 	.subcontents{
