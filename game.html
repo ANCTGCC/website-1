@@ -14,7 +14,7 @@
 
   <script type="text/javascript">
     $(function(){
-      $("#select_value").click(function(){
+      $("#select_value").on("click touchend",function(){
         var set_value = $("#select_value").val();
         if(set_value == 1){
           $(".shooting").css("display","");
