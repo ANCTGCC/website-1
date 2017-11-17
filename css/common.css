@@ -25,7 +25,8 @@ a:visited{
 }
 a[target="_blank"]::after{
 	font-family: FontAwesome;
-	content: " \f08e";
+	content: "\f08e";
+	font-size: 13px;
 }
 .submenu a[target="_blank"]::after{
 	content: "";
